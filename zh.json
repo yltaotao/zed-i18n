@@ -913,7 +913,8 @@
   "Search commits…": "搜索提交…",
   "Open In Browser": "在浏览器中打开",
   "View Commit": "查看提交",
-  "No commits found": "未找到提交"
+  "No commits found": "未找到提交",
+  "Git Status": "Git 状态"
  },
  "zed/crates/git_ui/src/git_panel.rs": {
   "Stage All": "暂存所有",
@@ -1256,7 +1257,8 @@
   "Start Free Trial": "开始免费试用"
  },
  "zed/crates/language_models/src/provider/llama_cpp.rs": {
-  "API key configured": "API 密钥已配置"
+  "API key configured": "API 密钥已配置",
+  "API URL": "API 地址"
  },
  "zed/crates/language_models/src/provider/lmstudio.rs": {
   "credentials not found": "未找到凭证",
@@ -1266,14 +1268,16 @@
   "Download LM Studio": "下载 LM Studio",
   "Model Catalog": "模型目录",
   "Connected": "已连接",
-  "Connect": "连接"
+  "Connect": "连接",
+  "API URL": "API 地址"
  },
  "zed/crates/language_models/src/provider/ollama.rs": {
   "API key configured": "API 密钥已配置",
   "Reset": "重置",
   "Download Ollama": "下载 Ollama",
   "Connected": "已连接",
-  "Connect": "连接"
+  "Connect": "连接",
+  "API URL": "API 地址"
  },
  "zed/crates/language_models/src/provider/openai_subscribed.rs": {
   "Sign Out": "登出",
@@ -1514,7 +1518,8 @@
   "missing label": "缺少标签",
   "Inlay hints": "内嵌提示",
   "lsp to project inlay hint conversion": "LSP 到项目内嵌提示转换",
-  "Linked editing range": "链接编辑范围"
+  "Linked editing range": "链接编辑范围",
+  "Code Lens": "代码镜头"
  },
  "zed/crates/project/src/lsp_store.rs": {
   "No changes": "无更改",
@@ -1728,7 +1733,8 @@
   "Close Search Bar": "关闭搜索栏",
   "Replace Next Match": "替换下一个",
   "Replace All Matches": "全部替换",
-  "find and replace": "查找和替换"
+  "find and replace": "查找和替换",
+  "Whole Word": "全词匹配"
  },
  "zed/crates/search/src/project_search.rs": {
   "No Results": "无结果",
@@ -1835,11 +1841,155 @@
   "Project Panel Title Tooltips Delay": "项目面板标题提示延迟",
   "Sort By": "排序方式",
   "Group By": "分组方式",
-  "External Agents": "外部智能体"
+  "External Agents": "外部智能体",
+  "Tab Bar": "标签栏",
+  "UI Font": "界面字体",
+  "Git Diff": "Git 差异",
+  "Tab Size": "制表符宽度",
+  "Auto Save": "自动保存",
+  "Code Lens": "代码镜头",
+  "Diff Base": "差异基准",
+  "File Diff": "文件差异",
+  "File Scan": "文件扫描",
+  "Font Size": "字号",
+  "Git Hunks": "Git 变更块",
+  "Hard Tabs": "硬制表符",
+  "Hide Root": "隐藏根目录",
+  "Max Width": "最大宽度",
+  "Soft Wrap": "自动换行",
+  "Sort Mode": "排序方式",
+  "Title Bar": "标题栏",
+  "Tree View": "树形视图",
+  "Auto Fetch": "自动获取",
+  "Dark Theme": "深色主题",
+  "Diff Stats": "差异统计",
+  "Disable AI": "禁用 AI",
+  "Display In": "显示于",
+  "File Icons": "文件图标",
+  "File Types": "文件类型",
+  "Git Gutter": "Git 行标记",
+  "Git Status": "Git 状态",
+  "Helix Mode": "Helix 模式",
+  "Hide Mouse": "隐藏鼠标",
+  "Hunk Style": "变更块样式",
+  "Icon Theme": "图标主题",
+  "Line Width": "线宽",
+  "Menu Delay": "菜单延迟",
+  "NO DEFAULT": "无默认值",
+  "Path Style": "路径样式",
+  "Prefer LSP": "优先使用 LSP",
+  "Scroll Bar": "滚动条",
+  "Server URL": "服务器地址",
+  "Show Folds": "显示折叠",
+  "Show Menus": "显示菜单",
+  "Sort Order": "排序顺序",
+  "Status Bar": "状态栏",
+  "Test Audio": "测试音频",
+  "Theme Name": "主题名称",
+  "Whole Word": "全词匹配",
+  "Auto Indent": "自动缩进",
+  "Auto Update": "自动更新",
+  "Border Size": "边框大小",
+  "Buffer Font": "编辑区字体",
+  "File Finder": "文件查找器",
+  "Font Family": "字体族",
+  "Font Weight": "字重",
+  "Hide Hidden": "隐藏隐藏文件",
+  "Indent Size": "缩进宽度",
+  "Insert Mode": "插入模式",
+  "Light Theme": "浅色主题",
+  "Line Ending": "行尾符",
+  "Line Height": "行高",
+  "Search Wrap": "搜索循环",
+  "Show Avatar": "显示头像",
+  "Starts Open": "初始为展开",
+  "Wrap Guides": "换行参考线",
+  "Agent Review": "智能体审查",
+  "Allow Rewrap": "允许重新换行",
+  "Audible Bell": "响铃提示",
+  "Auto Compact": "自动压缩",
+  "Cursor Blink": "光标闪烁",
+  "Cursor Shape": "光标形状",
+  "Custom Delay": "自定义延迟",
+  "Custom Width": "自定义宽度",
+  "Default Mode": "默认模式",
+  "Display Mode": "显示模式",
+  "Hidden Files": "隐藏文件",
+  "Hiding Delay": "隐藏延迟",
+  "Image Viewer": "图片查看器",
+  "Linked Edits": "联动编辑",
+  "Max Severity": "最高严重级别",
+  "Maximum Tabs": "最大标签数",
+  "Mermaid Font": "Mermaid 字体",
+  "Mute On Join": "加入时静音",
+  "Preview Tabs": "预览标签页",
+  "Regex Search": "正则搜索",
+  "Show Sign In": "显示登录",
+  "Show Tab Bar": "显示标签栏",
+  "Tab Settings": "制表符设置",
+  "Thumb Border": "滑块边框",
+  "Title Format": "标题格式",
+  "Branch Picker": "分支选择器",
+  "Button Layout": "按钮布局",
+  "Commit Editor": "提交编辑器",
+  "Default Width": "默认宽度",
+  "Drag and Drop": "拖放",
+  "Entry Spacing": "条目间距",
+  "Feature Flags": "功能开关",
+  "Font Features": "字体特性",
+  "Hover Popover": "悬停弹窗",
+  "Indent Guides": "缩进参考线",
+  "LLM Providers": "大模型服务商",
+  "On New Window": "新窗口时",
+  "Private Files": "私有文件",
+  "Quick Actions": "快捷操作",
+  "Reduce Motion": "减少动态效果",
+  "Share On Join": "加入时共享",
+  "Sticky Scroll": "粘性滚动",
+  "Terminal Dock": "终端停靠位置",
+  "Use Autoclose": "自动闭合",
+  "Auto Save Mode": "自动保存方式",
+  "Case Sensitive": "区分大小写",
+  "Copy On Select": "选中即复制",
+  "Debugger Panel": "调试面板",
+  "Default Height": "默认高度",
+  "Font Fallbacks": "后备字体",
+  "Format On Save": "保存时格式化",
+  "Git Blame View": "Git 追溯视图",
+  "Git Panel Dock": "Git 面板停靠位置",
+  "LSP Highlights": "LSP 高亮",
+  "Minimum Column": "最小列宽",
+  "Option As Meta": "Option 作为 Meta",
+  "Pane Modifiers": "窗格修饰键",
+  "Reveal If Open": "打开时显示",
+  "Search & Files": "搜索与文件",
+  "Search Results": "搜索结果",
+  "Search on Type": "输入时搜索",
+  "Show Bookmarks": "显示书签",
+  "Show Runnables": "显示可运行项",
+  "Show Scrollbar": "显示滚动条",
+  "Show User Menu": "显示用户菜单",
+  "Signature Help": "签名提示",
+  "Text Rendering": "文本渲染",
+  "Title Override": "标题覆盖",
+  "Which-key Menu": "Which-key 菜单",
+  "Zoomed Padding": "缩放内边距",
+  "Accessible Mode": "无障碍模式",
+  "Center on Match": "匹配项居中",
+  "Command Palette": "命令面板",
+  "Cursor Blinking": "光标闪烁",
+  "Custom Digraphs": "自定义二合字母",
+  "Dark Icon Theme": "深色图标主题",
+  "Data Collection": "数据收集"
  },
  "zed/crates/settings_ui/src/pages/edit_prediction_provider_setup.rs": {
   "Select which provider to use for edit predictions.": "选择用于编辑预测的服务提供方。",
-  "API Key": "API 密钥"
+  "API Key": "API 密钥",
+  "API URL": "API 地址",
+  "Reset Key": "重置按键",
+  "Max Tokens": "最大 Token 数",
+  "Prompt Format": "提示词格式",
+  "Active Provider": "当前服务商"
  },
  "zed/crates/settings_ui/src/pages/external_agents_page.rs": {
   "External Agents": "外部智能体",
@@ -1848,7 +1998,10 @@
   "No active project found. Open a workspace to manage external agents.": "未找到活动项目。请打开一个工作区来管理外部智能体。",
   "Add Agent": "添加智能体",
   "Learn More": "了解更多",
-  "Edit in settings.json": "在 settings.json 中编辑"
+  "Edit in settings.json": "在 settings.json 中编辑",
+  "ACP Docs": "ACP 文档",
+  "Agent Name": "智能体名称",
+  "Configure Agent": "配置智能体"
  },
  "zed/crates/settings_ui/src/pages/llm_providers_page.rs": {
   "Configure Provider": "配置提供商",
@@ -1857,7 +2010,15 @@
   "To find an API key, visit the": "如需获取 API 密钥，请访问",
   "Add Model": "添加模型",
   "Default reasoning effort": "默认推理强度",
-  "Save Provider": "保存提供方"
+  "Save Provider": "保存提供方",
+  "API URL": "API 地址",
+  "Reset Key": "重置按键",
+  "Max Tokens": "最大 Token 数",
+  "Model Name": "模型名称",
+  "Remove Model": "移除模型",
+  "Provider Name": "服务商名称",
+  "Supports tools": "支持工具",
+  "Compatible APIs": "兼容 API"
  },
  "zed/crates/settings_ui/src/pages/mcp_servers_page.rs": {
   "Manage servers connected directly or via extensions.": "管理直接连接或通过扩展连接的服务器。",
@@ -1867,26 +2028,53 @@
   "Log Out": "退出登录",
   "Authenticate to connect this server": "进行身份验证以连接此服务器",
   "A client secret is required to connect this server": "连接此服务器需要客户端密钥",
-  "Add Server": "添加服务器"
+  "Add Server": "添加服务器",
+  "1 tool": "1 个工具",
+  "Invalid URL": "无效地址",
+  "Server Name": "服务器名称",
+  "Bearer token": "Bearer 令牌"
  },
  "zed/crates/settings_ui/src/pages/sandbox_settings.rs": {
   "Learn more about sandboxing": "进一步了解沙箱",
   "Add domain (e.g. github.com or *.npmjs.org)…": "添加域名（例如 github.com 或 *.npmjs.org）…",
-  "Add an absolute path (e.g. /path/to/directory)…": "添加绝对路径（例如 /path/to/directory）…"
+  "Add an absolute path (e.g. /path/to/directory)…": "添加绝对路径（例如 /path/to/directory）…",
+  "File System": "文件系统",
+  "Remove Path": "移除路径",
+  "Remove Domain": "移除域名",
+  "Enable Sandbox": "启用沙箱",
+  "Writable Paths": "可写路径",
+  "Allowed Domains": "允许的域名"
  },
  "zed/crates/settings_ui/src/pages/skill_creator.rs": {
   "failed to read response body": "读取响应体失败",
-  "Add skill content…": "添加技能内容…"
+  "Add skill content…": "添加技能内容…",
+  "Not Found": "未找到",
+  "Save Skill": "保存技能",
+  "Code Review": "代码审查",
+  "File exists": "文件已存在",
+  "Skill Content": "技能内容",
+  "Imported Skill": "导入的技能"
  },
  "zed/crates/settings_ui/src/pages/skills_setup.rs": {
-  "Create a Skill": "创建技能"
+  "Create a Skill": "创建技能",
+  "Delete Skill": "删除技能",
+  "Copy Share Link": "复制分享链接"
  },
  "zed/crates/settings_ui/src/pages/tool_permissions_setup.rs": {
   "Copy Path": "复制路径",
   "Enter a tool input to test your rules…": "输入工具调用内容以测试你的规则…",
   "No regex matches, using the default action.": "没有正则匹配，将使用默认操作。",
   "Add regex pattern…": "添加正则表达式…",
-  "Action to take when no patterns match.": "没有模式匹配时要执行的操作。"
+  "Action to take when no patterns match.": "没有模式匹配时要执行的操作。",
+  "1 rule": "1 条规则",
+  "Edit File": "编辑文件",
+  "Move Path": "移动路径",
+  "Write File": "写入文件",
+  "Always Deny": "始终拒绝",
+  "Delete Path": "删除路径",
+  "Always Confirm": "始终确认",
+  "Default Action": "默认操作",
+  "Delete Pattern": "删除模式"
  },
  "zed/crates/settings_ui/src/settings_ui.rs": {
   "Configure": "配置",
@@ -1906,7 +2094,19 @@
   "Create Skill": "创建技能",
   "Fix in settings.json": "在 settings.json 中修复",
   "Restricted Mode": "受限模式",
-  "Manage Trust": "管理信任"
+  "Manage Trust": "管理信任",
+  "Tab Bar": "标签栏",
+  "Title Bar": "标题栏",
+  "NO DEFAULT": "无默认值",
+  "Status Bar": "状态栏",
+  "NO RENDERER": "无渲染器",
+  "Change Scope": "变更范围",
+  "Focus Navbar": "聚焦导航栏",
+  "General Page": "常规页",
+  "Focus Content": "聚焦内容",
+  "LLM Providers": "大模型服务商",
+  "Tall final row": "末行加高",
+  "Zed — Settings": "Zed — 设置"
  },
  "zed/crates/sidebar/src/sidebar.rs": {
   "Search threads…": "搜索线程…",
@@ -2598,7 +2798,8 @@
   "Email Us...": "给我们发送电子邮件...",
   "Documentation": "文档",
   "Zed Repository": "Zed 仓库",
-  "Join the Team": "加入团队"
+  "Join the Team": "加入团队",
+  "Debugger Panel": "调试面板"
  },
  "zed/crates/zed/src/zed/mac_only_instance.rs": {
   "Zed Editor Dev Instance Running": "Zed 编辑器开发实例正在运行",
@@ -2654,7 +2855,9 @@
   "Inline Git Blame": "内联 Git 追溯",
   "Column Git Blame": "列 Git 追溯",
   "Vim Mode": "Vim 模式",
-  "quick action bar": "快速操作栏"
+  "quick action bar": "快速操作栏",
+  "Code Lens": "代码镜头",
+  "Helix Mode": "Helix 模式"
  },
  "zed/crates/zed/src/zed/quick_action_bar/preview.rs": {
   "Preview Markdown": "预览 Markdown"
@@ -2685,5 +2888,39 @@
  },
  "zed/crates/zlog/src/sink.rs": {
   "Hello, world!": "你好，世界！"
+ },
+ "zed/crates/edit_prediction/src/edit_prediction_tests.rs": {
+  "Not Found": "未找到"
+ },
+ "zed/crates/ui/src/components/ai/configured_api_card.rs": {
+  "Reset Key": "重置按键"
+ },
+ "zed/crates/settings_ui/src/pages/audio_test_window.rs": {
+  "Audio Test": "音频测试",
+  "Input Device": "输入设备",
+  "Stop Testing": "停止测试",
+  "Output Device": "输出设备",
+  "Start Testing": "开始测试"
+ },
+ "zed/crates/ui/src/components/label/label_like.rs": {
+  "Line Height": "行高"
+ },
+ "zed/crates/migrator/src/migrator.rs": {
+  "Bearer token": "Bearer 令牌"
+ },
+ "zed/crates/settings_ui/src/components/number_field.rs": {
+  "Number Field": "数字字段"
+ },
+ "zed/crates/settings_ui/src/components/font_picker.rs": {
+  "Search fonts…": "搜索字体…"
+ },
+ "zed/crates/settings_ui/src/components/theme_picker.rs": {
+  "Search theme…": "搜索主题…"
+ },
+ "zed/crates/settings_ui/src/components/ollama_model_picker.rs": {
+  "Search models…": "搜索模型…"
+ },
+ "zed/crates/settings_ui/src/pages/audio_input_output_setup.rs": {
+  "System Default": "系统默认"
  }
 }
