@@ -84,12 +84,13 @@ jobs:
           } else {
             "构建未产生 zed/build.log（失败发生在编译之前）" | Out-File last-error.txt -Encoding utf8
           }
-          Get-ChildItem zed -ErrorAction SilentlyContinue | Out-File -Append last-error.txt -Encoding utf8
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add last-error.txt
-          git commit -m "ci: 失败日志 $(Get-Date -Format yyyyMMdd-HHmm)" || echo "无变更"
-          git push origin HEAD:main
+          git checkout -q --orphan ci-log
+          git rm -rq --cached .
+          git add -f last-error.txt
+          git commit -q -m "ci log $(Get-Date -Format yyyyMMdd-HHmm)"
+          git push -q --force origin HEAD:ci-log
 
       - name: 打包
         run: |
