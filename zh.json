@@ -7,7 +7,14 @@
   "Read file": "读取文件",
   "Tool call": "工具调用",
   "In Progress": "进行中",
-  "Unknown state": "未知状态"
+  "Unknown state": "未知状态",
+  "Tool call not found": "未找到工具调用",
+  "Continuing without it.": "不启用它继续。",
+  "MCP server unavailable": "MCP 服务器不可用",
+  "Agent thread in progress": "智能体线程进行中",
+  "Waiting for confirmation": "等待确认",
+  "Session is not a subagent": "会话不是子智能体",
+  "Optional integration failed": "可选集成失败"
  },
  "zed/crates/acp_thread/src/auth_methods.rs": {
   "Sign in": "登录"
@@ -32,7 +39,21 @@
   "Model not found": "未找到模型",
   "Session not found": "未找到会话",
   "Provider not found": "未找到服务商",
-  "No models available": "没有可用的模型"
+  "No models available": "没有可用的模型",
+  "Session was released": "会话已释放",
+  "Failed to get session": "获取会话失败",
+  "Tool canceled by user": "工具被用户取消",
+  "Context server not found": "未找到上下文服务器",
+  "Creating new NativeAgent": "正在创建新的 NativeAgent",
+  "No user message to retry": "没有可重试的用户消息",
+  "Failed to read skill body": "读取技能正文失败",
+  "Native agent was released": "原生智能体已释放",
+  "No response from subagent": "子智能体没有响应",
+  "Response stream completed": "响应流已完成",
+  "Failed to generate summary": "生成摘要失败",
+  "Failed to serialize thread": "序列化线程失败",
+  "Native execution not found": "未找到原生执行环境",
+  "Continue where you left off": "从上次中断处继续"
  },
  "zed/crates/agent/src/legacy_thread.rs": {
   "Hello, world!": "你好，世界！"
@@ -40,14 +61,16 @@
  "zed/crates/agent/src/tools/ask_user_tool.rs": {
   "Choose an option": "选择一个选项",
   "Only one": "仅一个",
-  "Your answer": "你的回答"
+  "Your answer": "你的回答",
+  "Or type your own answer": "或输入你自己的回答"
  },
  "zed/crates/agent/src/tools/edit_session/streaming_fuzzy_matcher.rs": {
   "This is a test": "这是一个测试"
  },
  "zed/crates/agent/src/tools/fetch_tool.rs": {
   "error reading response body": "读取响应正文时出错",
-  "status error {}, response: {text:?}": "状态错误 {}, 响应: {text:?}"
+  "status error {}, response: {text:?}": "状态错误 {}, 响应: {text:?}",
+  "Fetch cancelled by user": "获取被用户取消"
  },
  "zed/crates/agent/src/tools/find_path_tool.rs": {
   "No matches": "无匹配项",
@@ -59,7 +82,8 @@
   "Extract to function": "提取为函数"
  },
  "zed/crates/agent/src/tools/list_directory_tool.rs": {
-  "Path not found": "路径未找到"
+  "Path not found": "路径未找到",
+  "Cannot list directory": "无法列出目录"
  },
  "zed/crates/agent/src/tools/web_search_tool.rs": {
   "Web Search Failed": "网络搜索失败",
@@ -74,19 +98,23 @@
   "Expected object": "应为对象",
   "Open Repository": "打开仓库",
   "Configure Server": "配置服务器",
-  "No output available": "没有可用输出"
+  "No output available": "没有可用输出",
+  "Context server not found": "未找到上下文服务器"
  },
  "zed/crates/agent_ui/src/agent_configuration/manage_profiles_modal.rs": {
   "Go Back": "返回",
   "Profile name": "配置名称",
-  "Configure MCP Tools": "配置 MCP 工具"
+  "Configure MCP Tools": "配置 MCP 工具",
+  "Configure Default Model": "配置默认模型",
+  "Configure Built-in Tools": "配置内置工具"
  },
  "zed/crates/agent_ui/src/agent_diff.rs": {
   "Next Hunk": "下一块",
   "Previous Hunk": "上一块",
   "Keep All": "全部保留",
   "Reject All": "全部拒绝",
-  "Continue Iterating": "继续迭代"
+  "Continue Iterating": "继续迭代",
+  "No changes to review": "没有可审查的更改"
  },
  "zed/crates/agent_ui/src/agent_panel.rs": {
   "Agent Panel": "代理面板",
@@ -101,14 +129,22 @@
   "No active thread": "没有活动线程",
   "Session not found": "未找到会话",
   "Enable Full Screen": "启用全屏",
-  "Disable Full Screen": "禁用全屏"
+  "Disable Full Screen": "禁用全屏",
+  "Toggle Threads Sidebar": "切换线程侧边栏",
+  "Open Thread as Markdown": "以 Markdown 打开线程"
  },
  "zed/crates/agent_ui/src/agent_registry_ui.rs": {
   "Not Installed": "未安装",
   "Learn More": "了解更多",
   "ACP Registry": "ACP 注册表",
   "Search agents...": "搜索智能体…",
-  "Loading registry...": "正在加载注册表…"
+  "Loading registry...": "正在加载注册表…",
+  "Visit Agent Website": "访问智能体网站",
+  "No agents available.": "没有可用的智能体。",
+  "No installed agents.": "未安装任何智能体。",
+  "No uninstalled agents.": "没有未安装的智能体。",
+  "Visit Agent Repository": "访问智能体仓库",
+  "No agents match your search.": "没有匹配搜索的智能体。"
  },
  "zed/crates/agent_ui/src/agent_ui.rs": {
   "Add Context": "添加上下文",
@@ -117,14 +153,18 @@
  },
  "zed/crates/agent_ui/src/buffer_codegen.rs": {
   "invalid transformation range": "无效转换范围",
-  "failed to strip invalid spans, chunk size: {}": "无法去除无效跨度，块大小：{}"
+  "failed to strip invalid spans, chunk size: {}": "无法去除无效跨度，块大小：{}",
+  "EOF while parsing a string": "解析字符串时遇到 EOF"
  },
  "zed/crates/agent_ui/src/config_options.rs": {
   "Change Model": "更改模型",
   "Extra High": "极高",
   "Web Search": "网页搜索",
   "Change Mode": "切换模式",
-  "Cycle Through Modes": "循环切换模式"
+  "Cycle Through Modes": "循环切换模式",
+  "Cycle Favorite Models": "循环切换收藏模型",
+  "Cycle Thinking Effort": "循环切换思考强度",
+  "Change Thinking Effort": "更改思考强度"
  },
  "zed/crates/agent_ui/src/conversation_view.rs": {
   "Copy Error Message": "复制错误消息",
@@ -148,7 +188,19 @@
   "Failed to Install": "安装失败",
   "Type your message": "输入你的消息",
   "Waiting for input": "等待输入",
-  "Invalid gzip header": "无效的 gzip 头"
+  "Invalid gzip header": "无效的 gzip 头",
+  "Sign in to continue": "登录以继续",
+  "Unknown auth method": "未知的认证方式",
+  "Allow for this thread": "允许（仅此线程）",
+  "Authentication failed": "认证失败",
+  "Finished running tools": "工具运行完成",
+  "Authentication required": "需要身份验证",
+  "Copy This Agent Response": "复制此智能体回答",
+  "Try to restart the agent": "尝试重启智能体",
+  "Discard Saved Submissions": "放弃已保存的提交内容",
+  "Optional integration failed": "可选集成失败",
+  "This should not be possible": "这不应该发生",
+  "Unsupported message content": "不支持的消息内容"
  },
  "zed/crates/agent_ui/src/conversation_view/thread_view.rs": {
   "Add Context": "添加上下文",
@@ -209,7 +261,43 @@
   "Compaction Canceled": "压缩已取消",
   "Credentials Missing": "缺少凭据",
   "Edit Queued Message": "编辑排队消息",
-  "Files & Directories": "文件与目录"
+  "Files & Directories": "文件与目录",
+  "Activity unconfirmed": "活动状态未确认",
+  "Enable Thinking Mode": "启用思考模式",
+  "Not Helpful Response": "回答没帮助",
+  "Output Limit Reached": "已达输出上限",
+  "Output was truncated": "输出已被截断",
+  "Provider Unavailable": "服务商不可用",
+  "Skill Failed to Load": "技能加载失败",
+  "View Sandboxing Docs": "查看沙箱文档",
+  "Authentication Failed": "认证失败",
+  "Awaiting Confirmation": "等待确认",
+  "Cycle Thinking Effort": "循环切换思考强度",
+  "Disable Thinking Mode": "禁用思考模式",
+  "Expand Message Editor": "展开消息编辑器",
+  "New Version Available": "有新版本可用",
+  "Type anything to edit": "输入任意内容以编辑",
+  "Agent Update Available": "智能体有更新可用",
+  "Change Thinking Effort": "更改思考强度",
+  "Connection Interrupted": "连接中断",
+  "Authentication Required": "需要身份验证",
+  "Minimize Message Editor": "最小化消息编辑器",
+  "Open Thread as Markdown": "以 Markdown 打开线程",
+  "Allowed for this thread:": "此线程已允许：",
+  "Copy This Agent Response": "复制此智能体回答",
+  "Discard Interrupted Edit": "放弃被中断的编辑",
+  "Message between sessions": "会话之间的消息",
+  "Couldn't create a sandbox": "无法创建沙箱",
+  "Defined in your settings:": "在你的设置中定义：",
+  "Make Subagent Full Screen": "将子智能体全屏",
+  "No text preview available": "没有可用的文本预览",
+  "Remove Message from Queue": "从队列移除消息",
+  "Thanks for your feedback!": "感谢你的反馈！",
+  "All domains (unrestricted)": "所有域名（不受限）",
+  "Unknown permission subject": "未知的权限对象",
+  "Enable and Don't Show Again": "启用且不再显示",
+  "Runs without the OS sandbox": "不启用操作系统沙箱运行",
+  "Always for selected commands": "对选中的命令始终允许"
  },
  "zed/crates/agent_ui/src/diagnostics.rs": {
   "diagnostics: {}": "诊断：{}",
@@ -237,29 +325,39 @@
   "Accept Transform": "接受转换",
   "Bad Result": "结果不佳",
   "Good Result": "结果良好",
-  "No configured model": "未配置模型"
+  "No configured model": "未配置模型",
+  "Click to copy rating ID": "点击复制评分 ID",
+  "Execute Generated Command": "执行生成的命令"
  },
  "zed/crates/agent_ui/src/mention_set.rs": {
   "project not found": "项目未找到",
   "worktree not found": "工作树未找到",
   "error reading response body": "读取响应正文时出错",
   "status error {}, response: {text:?}": "状态错误 {}, 响应: {text:?}",
-  "Project not found": "未找到项目"
+  "Project not found": "未找到项目",
+  "No diagnostics found.": "未发现诊断。",
+  "Failed to convert image": "图片转换失败"
  },
  "zed/crates/agent_ui/src/message_editor.rs": {
   "not supported": "不支持",
   "Plain Text": "纯文本",
   "Get help": "获取帮助",
   "Claude Agent": "Claude 智能体",
-  "Files & Directories": "文件与目录"
+  "Files & Directories": "文件与目录",
+  "Paste as Plain Text": "以纯文本粘贴",
+  "Unsupported message content": "不支持的消息内容"
  },
  "zed/crates/agent_ui/src/profile_selector.rs": {
   "Restricted Mode": "受限模式",
-  "Tools Unsupported": "不支持工具"
+  "Tools Unsupported": "不支持工具",
+  "Chat about your codebase.": "聊聊你的代码库。",
+  "Disabled in Restricted Mode": "在受限模式下已禁用",
+  "Get help to write anything.": "获取帮助来撰写任何内容。"
  },
  "zed/crates/agent_ui/src/terminal_inline_assistant.rs": {
   "invalid assist": "无效助手",
-  "Terminal inline assistant error: {}": "终端内联助手错误: {}"
+  "Terminal inline assistant error: {}": "终端内联助手错误: {}",
+  "No inline assistant model": "没有行内助手模型"
  },
  "zed/crates/agent_ui/src/threads_archive_view.rs": {
   "Delete Thread": "删除线程",
@@ -272,7 +370,11 @@
   "Archive Thread": "归档线程",
   "Import Threads": "导入线程",
   "No threads yet.": "还没有线程。",
-  "Show All Threads": "显示所有线程"
+  "Show All Threads": "显示所有线程",
+  "Start New Agent Thread": "开始新的智能体线程",
+  "No recent projects found": "未找到最近的项目",
+  "Choose from Local Folders": "从本地文件夹选择",
+  "Show Only Archived Threads": "仅显示已归档线程"
  },
  "zed/crates/agent_ui/src/ui/end_trial_upsell.rs": {
   "Upgrade to Zed Pro": "升级到 Zed Pro",
@@ -284,7 +386,8 @@
  "zed/crates/agent_ui/src/ui/model_selector_components.rs": {
   "Change Model": "更改模型",
   "Favorite Model": "收藏模型",
-  "Unfavorite Model": "取消收藏模型"
+  "Unfavorite Model": "取消收藏模型",
+  "Cycle Favorite Models": "循环切换收藏模型"
  },
  "zed/crates/ai_onboarding/src/agent_api_keys_onboarding.rs": {
   "Configure Providers": "配置提供者"
@@ -3240,7 +3343,9 @@
   "Remote Project": "远程项目",
   "Archive Thread": "归档线程",
   "Import Threads": "导入线程",
-  "Stop Generation": "停止生成"
+  "Stop Generation": "停止生成",
+  "Start New Agent Thread": "开始新的智能体线程",
+  "Open Thread as Markdown": "以 Markdown 打开线程"
  },
  "zed/crates/sidebar/src/sidebar_tests.rs": {
   "New Thread": "新话题",
@@ -4473,7 +4578,8 @@
   "Archived Thread": "已归档线程"
  },
  "zed/crates/agent/src/tools/read_file_tool.rs": {
-  "Read file": "读取文件"
+  "Read file": "读取文件",
+  "File read cancelled by user": "文件读取被用户取消"
  },
  "zed/crates/agent_ui/src/entry_view_state.rs": {
   "Tool call": "工具调用"
@@ -4507,13 +4613,19 @@
   "No threads": "无线程",
   "Import Threads": "导入线程",
   "Archived Thread": "已归档线程",
-  "Imported 1 thread.": "已导入 1 个线程。"
+  "Imported 1 thread.": "已导入 1 个线程。",
+  "Failed to list sessions.": "列出会话失败。",
+  "No threads found to import.": "未找到可导入的线程。"
  },
  "zed/crates/agent_ui/src/conversation_view/elicitation.rs": {
   "Open Again": "再次打开",
   "Repository Access": "仓库访问权限",
   "Terminal Commands": "终端命令",
-  "Waiting for input": "等待输入"
+  "Waiting for input": "等待输入",
+  "Choose an environment": "选择环境",
+  "Remember Authorization": "记住授权",
+  "Waiting for completion": "等待完成",
+  "Account name is required": "账户名为必填项"
  },
  "zed/crates/agent_ui/src/thread_worktree_archive.rs": {
   "WIP staged": "暂存中的进行中改动",
@@ -4528,7 +4640,10 @@
   "Web Search": "网页搜索",
   "Select a mode": "选择模式",
   "Sign in again": "重新登录",
-  "Pending request": "待处理的请求"
+  "Pending request": "待处理的请求",
+  "The user aborted a request": "用户中止了请求",
+  "This operation was aborted": "此操作已中止",
+  "Optional integration failed": "可选集成失败"
  },
  "zed/crates/agent_ui/src/completion_provider.rs": {
   "Branch Diff": "分支差异",
@@ -4546,10 +4661,24 @@
   "Create worktree": "创建工作树",
   "Invalid template": "无效模板",
   "Message not found": "未找到消息",
-  "Running compaction": "正在压缩"
+  "Running compaction": "正在压缩",
+  "Allow for this thread": "允许（仅此线程）",
+  "Tool canceled by user": "工具被用户取消",
+  "Allow for this subagent": "允许（仅此子智能体）",
+  "Run without sandbox once": "无沙箱运行一次",
+  "Turn execution completed": "轮次执行完成",
+  "Always run without sandbox": "始终无沙箱运行",
+  "Building completion request": "正在构建补全请求",
+  "Cancelling in progress turn": "正在取消进行中的轮次",
+  "Continue where you left off": "从上次中断处继续"
  },
  "zed/crates/agent/src/tools/terminal_tool.rs": {
-  "Allow always": "始终允许"
+  "Allow always": "始终允许",
+  "Allow for this thread": "允许（仅此线程）",
+  "WITHOUT an OS sandbox": "无操作系统沙箱",
+  "No output was captured": "未捕获到输出",
+  "Do not pipe output to `head`": "不要把输出管道到 `head`",
+  "Do not pipe output to `tail`": "不要把输出管道到 `tail`"
  },
  "zed/crates/settings_content/src/agent.rs": {
   "Allow always": "始终允许"
@@ -4563,27 +4692,36 @@
   "Invalid parameters": "无效参数"
  },
  "zed/crates/agent/src/tools/edit_file_tool.rs": {
-  "Editing file": "正在编辑文件"
+  "Editing file": "正在编辑文件",
+  "Edit cancelled by user": "编辑被用户取消",
+  "Could not find matching text": "未找到匹配的文本"
  },
  "zed/crates/agent/src/tools/write_file_tool.rs": {
-  "Writing file": "正在写入文件"
+  "Writing file": "正在写入文件",
+  "Write cancelled by user": "写入被用户取消"
  },
  "zed/crates/agent/src/tools/create_thread_tool.rs": {
   "Create thread": "创建线程",
-  "Create worktree": "创建工作树"
+  "Create worktree": "创建工作树",
+  "Investigate flaky login test": "调查不稳定的登录测试"
  },
  "zed/crates/agent_ui/src/conversation_view/subagent_card.rs": {
   "User canceled": "用户已取消"
  },
  "zed/crates/agent_ui/src/ui/session_notice.rs": {
   "Session Notice": "会话通知",
-  "Indexing resumed": "索引已恢复"
+  "Indexing resumed": "索引已恢复",
+  "Scheduled maintenance": "计划维护",
+  "MCP server unavailable": "MCP 服务器不可用",
+  "Overflowing notice stack": "通知堆栈溢出",
+  "Optional integration failed": "可选集成失败"
  },
  "zed/crates/agent/src/tools/find_references_tool.rs": {
   "Find references": "查找引用"
  },
  "zed/crates/agent/src/tools/create_directory_tool.rs": {
-  "Create directory": "创建目录"
+  "Create directory": "创建目录",
+  "Unused on this platform.": "在此平台上未使用。"
  },
  "zed/crates/agent/src/tools/go_to_definition_tool.rs": {
   "Go to definition": "转到定义"
@@ -4594,21 +4732,34 @@
  },
  "zed/crates/agent/src/tools/grep_tool.rs": {
   "No matches found": "未找到匹配项",
-  "Search with regex": "使用正则搜索"
+  "Search with regex": "使用正则搜索",
+  "Search cancelled by user": "搜索被用户取消"
  },
  "zed/crates/agent/src/tools/apply_code_action_tool.rs": {
-  "Apply code action": "应用代码操作"
+  "Apply code action": "应用代码操作",
+  "Index must be 1 or greater.": "索引必须大于等于 1。"
  },
  "zed/crates/acp_thread/src/mention.rs": {
   "Missing rule name": "缺少规则名称",
   "Terminal (1 line)": "终端（1 行）",
-  "Missing thread name": "缺少线程名称"
+  "Missing thread name": "缺少线程名称",
+  "Missing path for file": "文件缺少路径",
+  "Parsing line range end": "解析行范围结束",
+  "Missing path for symbol": "符号缺少路径",
+  "Parsing line range start": "解析行范围开始",
+  "Missing path for directory": "目录缺少路径",
+  "Missing path for selection": "选区缺少路径"
  },
  "zed/crates/acp_thread/src/connection.rs": {
-  "Session not found": "未找到会话"
+  "Session not found": "未找到会话",
+  "Failed to encode PNG": "PNG 编码失败",
+  "Authentication required": "需要身份验证",
+  "Logout is not supported": "不支持退出登录"
  },
  "zed/crates/agent_ui/src/ui/terminal_tool_header.rs": {
-  "Stop This Command": "停止此命令"
+  "Stop This Command": "停止此命令",
+  "Output was truncated": "输出已被截断",
+  "Terminal Tool Header": "终端工具标题"
  },
  "zed/crates/agent/src/tools/evals/terminal_tool.rs": {
   "Provider not found": "未找到服务商"
@@ -4617,9 +4768,75 @@
   "Provider not found": "未找到服务商"
  },
  "zed/crates/agent_servers/src/acp/v2.rs": {
-  "Session is closing": "会话正在关闭"
+  "Session is closing": "会话正在关闭",
+  "Session was released": "会话已释放",
+  "Connection was released": "连接已释放",
+  "Config watcher has closed": "配置监视已关闭",
+  "Session has been released": "会话已释放",
+  "Agent connection is closed": "智能体连接已关闭"
  },
  "zed/crates/agent/src/db.rs": {
-  "Failed to serialize": "序列化失败"
+  "Failed to serialize": "序列化失败",
+  "Failed to deserialize": "反序列化失败"
+ },
+ "zed/crates/agent_servers/src/acp.rs": {
+  "Unsupported version": "不支持的版本",
+  "Agent server not found": "未找到智能体服务器",
+  "Failed to get agent command": "获取智能体命令失败"
+ },
+ "zed/crates/agent_servers/src/acp/transport.rs": {
+  "Failed to take stdin": "获取 stdin 失败",
+  "Failed to take stderr": "获取 stderr 失败",
+  "Failed to take stdout": "获取 stdout 失败"
+ },
+ "zed/crates/agent/src/sandboxing.rs": {
+  "Allow for this thread": "允许（仅此线程）"
+ },
+ "zed/crates/agent/src/tools/copy_path_tool.rs": {
+  "Copy cancelled by user": "复制被用户取消"
+ },
+ "zed/crates/acp_thread/src/notices.rs": {
+  "MCP server unavailable": "MCP 服务器不可用",
+  "Optional integration failed": "可选集成失败"
+ },
+ "zed/crates/agent/src/tools/move_path_tool.rs": {
+  "Move cancelled by user": "移动被用户取消"
+ },
+ "zed/crates/agent_ui/src/ui/sandbox_status_tooltip.rs": {
+  "Sandbox Status Tooltip": "沙箱状态提示",
+  "Allowed for this thread:": "此线程已允许：",
+  "Defined in your settings:": "在你的设置中定义：",
+  "All domains (unrestricted)": "所有域名（不受限）"
+ },
+ "zed/crates/acp_thread/src/subagents.rs": {
+  "Authentication required": "需要身份验证"
+ },
+ "zed/crates/agent/src/tools/context_server_registry.rs": {
+  "Context server not found": "未找到上下文服务器",
+  "MCP tool cancelled by user": "MCP 工具被用户取消"
+ },
+ "zed/crates/project/src/context_server_store.rs": {
+  "Context server not found": "未找到上下文服务器"
+ },
+ "zed/crates/agent/src/tools/delete_path_tool.rs": {
+  "Delete cancelled by user": "删除被用户取消"
+ },
+ "zed/crates/agent_ui/src/context.rs": {
+  "Images attached by user:": "用户附加的图片："
+ },
+ "zed/crates/agent/src/tools/spawn_agent_tool.rs": {
+  "Researching alternatives": "正在研究替代方案"
+ },
+ "zed/crates/agent/src/tools/diagnostics_tool.rs": {
+  "Check project diagnostics": "检查项目诊断"
+ },
+ "zed/crates/acp_thread/src/diff.rs": {
+  "Unsupported file operation": "不支持的文件操作"
+ },
+ "zed/crates/agent_servers/src/acp/runtime.rs": {
+  "ACP connection owner dropped": "ACP 连接所有者已断开"
+ },
+ "zed/crates/agent/src/native_agent_server.rs": {
+  "Creating native agent entity": "正在创建原生智能体实体"
  }
 }
