@@ -52,7 +52,7 @@ jobs:
       - name: 替换词条
         env:
           PYTHONIOENCODING: utf-8
-        run: python replace.py
+        run: python tools/i18n.py replace
 
       - name: 确认替换生效
         run: |

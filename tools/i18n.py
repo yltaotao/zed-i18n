@@ -1,6 +1,9 @@
 """Zed 汉化工具（唯一入口，全部功能都在这里）。
 
 三步走：
+    python tools/i18n.py replace [zh.json] [--root .]
+        把词典里的中文替换进源码（CI 每次构建都跑这一步）
+
     python tools/i18n.py extract <上游源码目录> [--prefix zed] [-o strings.json]
         扫源码，把像界面文案的字符串提取出来
 
@@ -9,8 +12,6 @@
 
     python tools/i18n.py check <上游源码目录> [zh.json]
         校验 zh.json 每一条都能在源码里精确命中，且 {} 占位符没丢
-
-CI 不跑这个文件，它只跑 replace.py（把 zh.json 替换进源码后编译）。
 """
 
 import argparse
@@ -163,9 +164,49 @@ def cmd_check(args) -> int:
     return 0 if miss == 0 and not placeholder_bad else 1
 
 
+def cmd_replace(args) -> int:
+    """把 zh.json 里的中文替换进源码。CI 实际跑的就是这个子命令。"""
+    data = read_json(Path(args.dictionary), {})
+    root = Path(args.root)
+    missing = []
+    entries = replaced = 0
+
+    for rel, messages in data.items():
+        target = root / rel
+        if not target.exists():
+            missing.append(rel)
+            continue
+        text = target.read_text(encoding="utf-8")
+        # 长词条优先，避免短词条先替换掉长词条的一部分
+        for literal in sorted(messages, key=len, reverse=True):
+            translation = messages[literal]
+            if not translation:
+                continue
+            entries += 1
+            pattern = '"' + re.escape(literal) + '"'
+            text, count = re.subn(pattern, lambda _m, t=translation: '"' + t + '"', text)
+            replaced += count
+        target.write_text(text, encoding="utf-8")
+
+    print(f"replaced {replaced} occurrences, {entries} entries, {len(data)} files")
+    if missing:
+        print(f"{len(missing)} files no longer exist upstream:")
+        for item in missing:
+            print("  " + item)
+    if replaced == 0:
+        print("ERROR: nothing was replaced - dictionary keys or checkout path are wrong")
+        return 1
+    return 0
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(prog="i18n", description="Zed 汉化工具")
     sub = parser.add_subparsers(dest="command", required=True)
+
+    p_replace = sub.add_parser("replace", help="把词典替换进源码（CI 用这个）")
+    p_replace.add_argument("dictionary", nargs="?", default="zh.json")
+    p_replace.add_argument("--root", default=".", help="源码所在目录，词典里的路径相对它")
+    p_replace.set_defaults(func=cmd_replace)
 
     p_extract = sub.add_parser("extract", help="扫源码提取候选文案")
     p_extract.add_argument("src", help="上游源码目录")
