@@ -1,0 +1,56 @@
+构建未产生 zed/build.log（失败发生在编译之前）
+
+    Directory: D:\a\zed-i18n\zed-i18n\zed
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----          10/31/2026  2:43 PM                .agents
+d----          10/31/2026  2:43 PM                .cargo
+d----          10/31/2026  2:43 PM                .cloudflare
+d----          10/31/2026  2:43 PM                .config
+d----          10/31/2026  2:43 PM                .factory
+d----          10/31/2026  2:43 PM                .github
+d----          10/31/2026  2:43 PM                .wezel
+d----          10/31/2026  2:43 PM                .zed
+d----          10/31/2026  2:43 PM                assets
+d----          10/31/2026  2:43 PM                ci
+d----          10/31/2026  2:43 PM                crates
+d----          10/31/2026  2:43 PM                docs
+d----          10/31/2026  2:43 PM                extensions
+d----          10/31/2026  2:43 PM                legal
+d----          10/31/2026  2:43 PM                nix
+d----          10/31/2026  2:43 PM                script
+d----          10/31/2026  2:43 PM                tooling
+-a---          10/31/2026  2:43 PM           1809 .git-blame-ignore-revs
+-a---          10/31/2026  2:43 PM            237 .gitattributes
+-a---          10/31/2026  2:43 PM           1281 .gitignore
+-a---          10/31/2026  2:43 PM           7393 .mailmap
+-a---          10/31/2026  2:43 PM             27 .prettierrc
+-a---          10/31/2026  2:43 PM          12651 .rules
+la---          10/31/2026  2:43 PM              0 AGENTS.md -> .rules
+-a---          10/31/2026  2:43 PM         514880 Cargo.lock
+-a---          10/31/2026  2:43 PM          46718 Cargo.toml
+la---          10/31/2026  2:43 PM              0 CLAUDE.md -> .rules
+-a---          10/31/2026  2:43 PM           2618 clippy.toml
+-a---          10/31/2026  2:43 PM            145 CODE_OF_CONDUCT.md
+-a---          10/31/2026  2:43 PM            604 compose.yml
+-a---          10/31/2026  2:43 PM           6542 CONTRIBUTING.md
+-a---          10/31/2026  2:43 PM           4620 corgi.toml
+-a---          10/31/2026  2:43 PM            270 default.nix
+-a---          10/31/2026  2:43 PM           1307 Dockerfile-collab
+-a---          10/31/2026  2:43 PM            237 Dockerfile-collab.dockerignore
+-a---          10/31/2026  2:43 PM            237 Dockerfile-cross.dockerignore
+-a---          10/31/2026  2:43 PM            596 Dockerfile-distros
+-a---          10/31/2026  2:43 PM             28 Dockerfile-distros.dockerignore
+-a---          10/31/2026  2:43 PM           2596 flake.lock
+-a---          10/31/2026  2:43 PM            991 flake.nix
+la---          10/31/2026  2:43 PM              0 GEMINI.md -> .rules
+-a---          10/31/2026  2:43 PM          10990 LICENSE-APACHE
+-a---          10/31/2026  2:43 PM          34557 LICENSE-GPL
+-a---          10/31/2026  2:43 PM            178 Procfile
+-a---          10/31/2026  2:43 PM             52 Procfile.web
+-a---          10/31/2026  2:43 PM           2902 README.md
+-a---          10/31/2026  2:43 PM            271 rust-toolchain.toml
+-a---          10/31/2026  2:43 PM            117 rustfmt.toml
+-a---          10/31/2026  2:43 PM            268 shell.nix
+
