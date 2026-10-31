@@ -1,0 +1,95 @@
+name: Zed 汉化每日构建
+
+on:
+  schedule:
+    - cron: '0 15 * * *'
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: "上游分支/标签"
+        type: string
+        default: main
+      release:
+        description: "是否发布 Release"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: i18n-build
+  cancel-in-progress: false
+
+env:
+  CARGO_TERM_COLOR: always
+  UPSTREAM_REF: ${{ inputs.ref || 'main' }}
+
+jobs:
+  windows-x64:
+    runs-on: windows-latest
+    timeout-minutes: 240
+    steps:
+      - name: 启用长路径
+        run: |
+          git config --system core.longpaths true
+          New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem" `
+            -Name "LongPathsEnabled" -Value 1 -PropertyType DWORD -Force
+
+      - uses: actions/checkout@v4
+
+      - name: 拉取上游 Zed 源码
+        uses: actions/checkout@v4
+        with:
+          repository: zed-industries/zed
+          ref: ${{ env.UPSTREAM_REF }}
+          path: zed
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 替换词条
+        run: python replace.py
+
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          toolchain: nightly
+          targets: wasm32-wasip1
+
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: "zed -> target"
+
+      - name: 编译
+        working-directory: zed
+        run: cargo build --release --jobs 4
+
+      - name: 打包
+        run: |
+          $stamp = (Get-Date).ToString("yyyyMMdd")
+          New-Item -ItemType Directory -Force zed-release | Out-Null
+          Copy-Item zed/target/release/zed.exe zed-release/
+          if (Test-Path zed/target/release/conpty.dll) { Copy-Item zed/target/release/conpty.dll zed-release/ }
+          if (Test-Path zed/target/release/x64) { Copy-Item zed/target/release/x64 zed-release/ -Recurse }
+          Compress-Archive -Path zed-release/* -DestinationPath "zed-windows-$stamp.zip" -Force
+          (Get-FileHash "zed-windows-$stamp.zip" -Algorithm SHA256).Hash.ToLower() + "  zed-windows-$stamp.zip" | Out-File sha256sums.txt -Encoding ascii
+          echo "STAMP=$stamp" >> $env:GITHUB_ENV
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: zed-windows-${{ env.STAMP }}
+          path: |
+            zed-windows-*.zip
+            sha256sums.txt
+
+      - name: 发布 Release
+        if: github.event_name == 'schedule' || inputs.release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ env.STAMP }}
+          name: ${{ env.STAMP }}
+          make_latest: true
+          files: |
+            zed-windows-*.zip
+            sha256sums.txt
