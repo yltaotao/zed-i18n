@@ -584,10 +584,13 @@
   "Text": "文本",
   "File": "文件",
   "Folder": "文件夹",
-  "Unknown": "未知"
+  "Unknown": "未知",
+  "Enum Member": "枚举成员",
+  "Type Parameter": "类型参数"
  },
  "zed/crates/editor/src/debugger_hover.rs": {
-  "Copy Value": "复制值"
+  "Copy Value": "复制值",
+  "The debug session is no longer paused here": "调试会话已不再停在此处"
  },
  "zed/crates/editor/src/display_map.rs": {
   "invalid `OPERATIONS` variable": "无效的 `OPERATIONS` 变量",
@@ -625,12 +628,36 @@
   "Rename": "重命名",
   "Editor": "编辑器",
   "Cancel": "取消",
-  "bookmark indicator": "书签指示器"
+  "bookmark indicator": "书签指示器",
+  "LSP Edit": "LSP 编辑",
+  "Add Bookmark": "添加书签",
+  "Set Bookmark": "设置书签",
+  "Run to Cursor": "运行到光标处",
+  "Open Git Blame": "打开 Git 追溯",
+  "Set Breakpoint": "设置断点",
+  "Close Git Blame": "关闭 Git 追溯",
+  "Remove Bookmark": "移除书签",
+  "Unset Breakpoint": "取消断点",
+  "Unset breakpoint": "取消断点",
+  "Set Log Breakpoint": "设置日志断点",
+  "Edit Log Breakpoint": "编辑日志断点",
+  "Failed to create buffer": "创建缓冲区失败",
+  "Set Condition Breakpoint": "设置条件断点",
+  "Edit Condition Breakpoint": "编辑条件断点",
+  "Right-click for more options": "右键查看更多选项",
+  "Set Hit Condition Breakpoint": "设置命中条件断点",
+  "Edit Hit Condition Breakpoint": "编辑命中条件断点",
+  "How many breakpoint hits to ignore": "忽略多少次断点命中",
+  "A multi buffer in prompt isn't possible": "提示中不能使用多缓冲区",
+  "No executable code is associated with this line.": "此行没有关联的可执行代码。",
+  "No selection history for undone transaction; selection unchanged": "撤销的事务没有选区历史；选区未变"
  },
  "zed/crates/editor/src/editor_tests.rs": {
   "Plain Text": "纯文本",
   "World": "世界",
-  "Hello, world!": "你好，世界！"
+  "Hello, world!": "你好，世界！",
+  "Set Bookmark": "设置书签",
+  "Set Breakpoint": "设置断点"
  },
  "zed/crates/editor/src/element.rs": {
   "Visible context menu should always render.": "可见的上下文菜单应始终呈现。",
@@ -646,14 +673,17 @@
   "Unexpected extra invisible {actual_invisible:?} at index {i}": "在索引 {i} 处出现了意外的额外不可见字符 {actual_invisible:?}",
   "Missing expected invisibles after index {i}: {missing_expected_invisibles:?}": "在索引 {i} 之后缺少预期的不可见字符：{missing_expected_invisibles:?}",
   "Creating editor with mode {editor_mode:?}, width {}px and text '{input_text}'": "创建编辑器，模式为 {editor_mode:?}，宽度为 {} 像素，文本为 '{input_text}'",
-  "Right-Click to Copy Path": "右键复制路径"
+  "Right-Click to Copy Path": "右键复制路径",
+  "Expand Excerpt": "展开摘录"
  },
  "zed/crates/editor/src/element/header.rs": {
   "Open File": "打开文件",
   "Copy Path": "复制路径",
   "Copy Relative Path": "复制相对路径",
   "Reveal In Project Panel": "在项目面板中显示",
-  "Open in Terminal": "在终端中打开"
+  "Open in Terminal": "在终端中打开",
+  "Fold Excerpt": "折叠摘录",
+  "Unfold Excerpt": "取消折叠摘录"
  },
  "zed/crates/editor/src/git.rs": {
   "Stage Hunk": "暂存块",
@@ -662,7 +692,9 @@
   "Next Hunk": "下一块",
   "Previous Hunk": "上一块",
   "Add a review comment...": "添加评审评论…",
-  "Add Review (drag to select multiple lines)": "添加评审（拖动选择多行）"
+  "Add Review (drag to select multiple lines)": "添加评审（拖动选择多行）",
+  "Add Review": "添加审查",
+  "Failed to insert diff review overlay block": "插入差异审查覆盖块失败"
  },
  "zed/crates/editor/src/git/blame.rs": {
   "Updated buffers. Regenerating blame data...": "更新缓冲区。重新生成追溯数据...",
@@ -679,11 +711,13 @@
  },
  "zed/crates/editor/src/hover_links.rs": {
   "Run": "运行",
-  "Upgrade": "升级"
+  "Upgrade": "升级",
+  "Failed to create REGEX": "创建正则失败"
  },
  "zed/crates/editor/src/hover_popover.rs": {
   "Plain Text": "纯文本",
-  "open docs": "打开文档"
+  "open docs": "打开文档",
+  "Hover popover point out of bounds after moving": "移动后悬停弹窗位置越界"
  },
  "zed/crates/editor/src/inlays/inlay_hints.rs": {
   "Plain Text": "纯文本"
@@ -693,7 +727,12 @@
   "Editor": "编辑器",
   "Failed to query editor state": "查询编辑器状态失败",
   "failed to save serialized editor": "保存序列化编辑器失败",
-  "buffer doesn't have a file": "缓冲区没有文件"
+  "buffer doesn't have a file": "缓冲区没有文件",
+  "Open SVG Preview": "打开 SVG 预览",
+  "Open Markdown Preview": "打开 Markdown 预览",
+  "Failed to create buffer": "创建缓冲区失败",
+  "Failed to open path in project": "在项目中打开路径失败",
+  "Failed to create buffer while deserializing editor": "反序列化编辑器时创建缓冲区失败"
  },
  "zed/crates/editor/src/mouse_context_menu.rs": {
   "Go to Definition": "跳转到定义",
@@ -708,7 +747,17 @@
   "Copy": "复制",
   "Copy and Trim": "复制并修剪",
   "Paste": "粘贴",
-  "Open in Terminal": "在终端中打开"
+  "Open in Terminal": "在终端中打开",
+  "Run to Cursor": "运行到光标处",
+  "Open SVG Preview": "打开 SVG 预览",
+  "Show Code Actions": "显示代码操作",
+  "View File History": "查看文件历史",
+  "Evaluate Selection": "计算选区",
+  "Add to Agent Thread": "添加到智能体线程",
+  "Show Incoming Calls": "显示调用者",
+  "Show Outgoing Calls": "显示被调用者",
+  "Open Markdown Preview": "打开 Markdown 预览",
+  "Copy Permalink to Line": "复制该行永久链接"
  },
  "zed/crates/editor/src/persistence.rs": {
   "Test": "测试"
@@ -874,7 +923,8 @@
  "zed/crates/git_ui/src/branch_diff.rs": {
   "No active repository": "没有活动的代码仓库",
   "No changes": "无更改",
-  "Review Diff": "审阅差异"
+  "Review Diff": "审阅差异",
+  "Send this diff for your last agent to review.": "把此差异发送给上一个智能体审查。"
  },
  "zed/crates/git_ui/src/branch_picker.rs": {
   "No active repository": "没有活动的代码仓库",
@@ -895,7 +945,9 @@
   "Failed to create remote": "创建远程失败",
   "Remote name can't be empty": "远程名称不能为空",
   "Based off the current branch": "基于当前分支",
-  "Delete Local Tracking Branch": "删除本地跟踪分支"
+  "Delete Local Tracking Branch": "删除本地跟踪分支",
+  "Does not delete the branch on the remote": "不会删除远程分支",
+  "Failed to delete entry: wrong entry to delete": "删除条目失败：要删除的条目不正确"
  },
  "zed/crates/git_ui/src/commit_context_menu.rs": {
   "Learn More": "了解更多",
@@ -910,7 +962,9 @@
  "zed/crates/git_ui/src/commit_tooltip.rs": {
   "<no name>": "<无名>",
   "Error parsing date": "日期解析出错",
-  "Fetch Missing History": "获取缺失的历史"
+  "Fetch Missing History": "获取缺失的历史",
+  "Fetched the missing commit history": "已获取缺失的提交历史",
+  "Run `git fetch --unshallow` to download the full history": "运行 `git fetch --unshallow` 下载完整历史"
  },
  "zed/crates/git_ui/src/commit_view.rs": {
   "Buffer Search": "缓冲区搜索",
@@ -924,7 +978,8 @@
   "Expand Commit Description": "展开提交描述",
   "Stash has changed, pop aborted": "贮藏已变更，弹出已中止",
   "Stash has changed, drop aborted": "贮藏已变更，删除已中止",
-  "Stash has changed, not applying": "贮藏已变更，未应用"
+  "Stash has changed, not applying": "贮藏已变更，未应用",
+  "Show this file's full contents at this commit as added.": "以新增形式显示此提交时该文件的完整内容。"
  },
  "zed/crates/git_ui/src/conflict_view.rs": {
   "Use Both": "两者都用",
@@ -1111,7 +1166,14 @@
   "Pick which remote to push to": "选择要推送到的远程仓库",
   "Failed to load commit history": "加载提交历史失败",
   "Add Files to .git/info/exclude": "将文件添加到 .git/info/exclude",
-  "All conflicts marked as resolved": "所有冲突已标记为解决"
+  "All conflicts marked as resolved": "所有冲突已标记为解决",
+  "No remote configured for repository": "仓库未配置远程",
+  "Unable to construct pull request URL": "无法构造拉取请求链接",
+  "The footer shown at the bottom of the git panel.": "Git 面板底部显示的页脚。",
+  "Configure an LLM provider to generate commit messages.": "配置大模型服务商以生成提交信息。",
+  "Won't have entries to render without an active repository in Git Panel": "Git 面板中没有活动仓库时不会渲染条目",
+  "Git Commit": "Git 提交",
+  "View File History": "查看文件历史"
  },
  "zed/crates/git_ui/src/git_ui.rs": {
   "Fetch": "获取",
@@ -1162,7 +1224,8 @@
   "Go to Next Hunk": "跳到下一个变更块",
   "Unstaged Changes": "未暂存的更改",
   "Stage and Go to Next Hunk": "暂存并跳到下一个变更块",
-  "Unstage and Go to Next Hunk": "取消暂存并跳到下一个变更块"
+  "Unstage and Go to Next Hunk": "取消暂存并跳到下一个变更块",
+  "Send all review comments to the Agent panel": "把所有审查意见发送到智能体面板"
  },
  "zed/crates/git_ui/src/remote_output.rs": {
   "Create a pull request": "创建拉取请求",
@@ -1442,7 +1505,8 @@
  },
  "zed/crates/languages/src/go.rs": {
   "no cached binary": "无缓存的二进制文件",
-  "Hello, world!": "你好，世界！"
+  "Hello, world!": "你好，世界！",
+  "Failed to create REGEX": "创建正则失败"
  },
  "zed/crates/languages/src/json.rs": {
   "no cached binary": "无缓存的二进制文件"
@@ -1605,7 +1669,8 @@
   "buffer has no file": "缓冲区没有文件",
   "no permalink available": "无可用永久链接",
   "failed to parse permalink": "解析永久链接失败",
-  "invalid path": "无效路径"
+  "invalid path": "无效路径",
+  "Git Commit": "Git 提交"
  },
  "zed/crates/project/src/image_store.rs": {
   "Failed to load image content": "加载图像内容失败",
@@ -1733,7 +1798,12 @@
   "This cannot be undone.": "此操作无法撤销。",
   "Add to .git/info/exclude": "添加到 .git/info/exclude",
   "File is too large to load": "文件过大，无法加载",
-  "Do you want to replace it?": "你想替换它吗？"
+  "Do you want to replace it?": "你想替换它吗？",
+  "Are you sure you want to permanently delete": "你确定要永久删除",
+  "Edited sub-entry should be an ancestor of selected leaf entry": "被编辑的子条目应是所选叶子条目的祖先",
+  "File or directory name contains leading or trailing whitespace.": "文件或目录名包含开头或结尾空白。",
+  "Open SVG Preview": "打开 SVG 预览",
+  "Open Markdown Preview": "打开 Markdown 预览"
  },
  "zed/crates/prompt_store/src/prompt_store.rs": {
   "prompt not found": "未找到提示词",
@@ -2736,7 +2806,9 @@
   "Default Prettier options, in the format as in package.json section for Prettier.": "默认 Prettier 选项，格式与 package.json 中 Prettier 段一致。",
   "Font fallbacks for terminal text. If not set, defaults to buffer font fallbacks.": "终端文本的后备字体。未设置时使用缓冲区后备字体。",
   "Time in milliseconds until timeout error when connecting to a TCP debug adapter.": "连接 TCP 调试适配器时触发超时错误的等待毫秒数。",
-  "Whether to automatically enable case-sensitive search based on the search query.": "是否根据搜索内容自动启用区分大小写搜索。"
+  "Whether to automatically enable case-sensitive search based on the search query.": "是否根据搜索内容自动启用区分大小写搜索。",
+  "An optional string to override the title of the terminal tab.": "用于覆盖终端标签页标题的可选字符串。",
+  "Default action when clicking a changed file in the Git panel.": "在 Git 面板中点击已更改文件时的默认操作。"
  },
  "zed/crates/settings_ui/src/pages/edit_prediction_provider_setup.rs": {
   "Select which provider to use for edit predictions.": "选择用于编辑预测的服务提供方。",
@@ -3154,7 +3226,8 @@
   "Rename": "重命名",
   "Rerun task": "重新运行任务",
   "Paste Text": "粘贴文本",
-  "New Center Terminal": "新建居中终端"
+  "New Center Terminal": "新建居中终端",
+  "Add to Agent Thread": "添加到智能体线程"
  },
  "zed/crates/text/src/patch.rs": {
   "invalid `OPERATIONS` variable": "无效的 `OPERATIONS` 变量"
@@ -3251,7 +3324,10 @@
   "Client Secret Required.": "需要客户端密钥。",
   "Authentication Required.": "需要身份验证。",
   "Agent with icon (running)": "带图标的智能体（运行中）",
-  "MCP server (starting, animated)": "MCP 服务器（启动中，动画）"
+  "MCP server (starting, animated)": "MCP 服务器（启动中，动画）",
+  "Registry agent (starting, animated)": "注册表智能体（启动中，动画）",
+  "Failed to connect: connection refused": "连接失败：连接被拒绝",
+  "MCP server with letter avatar (running)": "带字母头像的 MCP 服务器（运行中）"
  },
  "zed/crates/ui/src/components/ai/thread_item.rs": {
   "Waiting for Confirmation": "等待确认",
@@ -3259,14 +3335,29 @@
   "Hover to see action button": "悬停以查看操作按钮",
   "Thread with project context": "带项目上下文的线程",
   "Implement keyboard navigation": "实现键盘导航",
-  "Execute shell command in terminal": "在终端中执行 shell 命令"
+  "Execute shell command in terminal": "在终端中执行 shell 命令",
+  "Thread spanning multiple worktrees": "跨多个工作树的线程",
+  "Failed to connect to language server": "连接语言服务器失败",
+  "Main worktree branch with diff stats": "带差异统计的主工作树分支",
+  "Multi-root with per-worktree branches": "多根项目，每个工作树独立分支",
+  "Thread with a very long worktree name": "工作树名称很长的线程",
+  "Metadata overflow with long branch name": "分支名过长导致元数据溢出",
+  "Project Paths + Worktree (archive view)": "项目路径 + 工作树（归档视图）",
+  "Worktree + Branch + Changes + Timestamp": "工作树 + 分支 + 更改 + 时间戳",
+  "Add line numbers option to FileEditBlock": "为 FileEditBlock 添加行号选项",
+  "Filtered thread with highlighted worktree": "带高亮工作树的筛选后线程",
+  "Thread with every metadata field populated": "所有元数据字段都有值的线程",
+  "Main Worktree (hidden) + Changes + Timestamp": "主工作树（隐藏）+ 更改 + 时间戳",
+  "Managing user and project settings interactions": "管理用户设置与项目设置的交互",
+  "Linking to the Agent Panel Depending on Settings": "视设置决定是否链接到智能体面板"
  },
  "zed/crates/ui/src/components/banner.rs": {
   "Learn More": "了解更多",
   "Operation completed successfully": "操作已成功完成",
   "Your settings file uses deprecated settings": "你的设置文件中使用了已弃用的设置",
   "Update Settings": "更新设置",
-  "Connection error: unable to connect to server": "连接错误：无法连接到服务器"
+  "Connection error: unable to connect to server": "连接错误：无法连接到服务器",
+  "This is a default banner with no customization": "这是无自定义的默认横幅"
  },
  "zed/crates/ui/src/components/callout.rs": {
   "Upgrade to Pro": "升级至专业版",
@@ -3280,7 +3371,11 @@
   "Please retry in 26.33s.": "请在 26.33 秒后重试。",
   "With Title and Description": "带标题和描述",
   "Error with Multiple Actions": "含多个操作时的错误",
-  "You exceeded your current quota.": "你已超出当前配额。"
+  "You exceeded your current quota.": "你已超出当前配额。",
+  "For more information, visit the docs.": "更多信息请查阅文档。",
+  "System maintenance scheduled for tonight": "系统维护已安排在今晚",
+  "This error occurs when you have exceeded your API quota.": "此错误表示你已超出 API 配额。",
+  "We'll backup your current settings and update them to the new format.": "我们会备份你当前的设置并更新为新格式。"
  },
  "zed/crates/ui/src/components/collab/collab_notification.rs": {
   "Project Shared": "项目已共享",
@@ -3312,12 +3407,19 @@
   "Stay in Restricted Mode": "留在受限模式",
   "Trust and Continue": "信任并继续",
   "Language servers from running": "阻止语言服务器运行",
-  "MCP integrations from installing": "阻止安装 MCP 集成"
+  "MCP integrations from installing": "阻止安装 MCP 集成",
+  "Project settings from being applied": "阻止应用项目设置",
+  "Trust all projects in parent directory": "信任上级目录中的所有项目",
+  "A modal dialog that presents an alert message with primary and dismiss actions.": "显示警告消息以及主要和关闭操作的模态对话框。"
  },
  "zed/crates/ui/src/components/notification/announcement_toast.rs": {
   "Learn More": "了解更多",
   "Run multiple agent threads simultaneously across projects.": "跨项目同时运行多个智能体会话。",
-  "Try Now": "立即试用"
+  "Try Now": "立即试用",
+  "Mix and match Zed's agent with any ACP-compatible agent": "将 Zed 的智能体与任何兼容 ACP 的智能体混用",
+  "Updated workspace layout designed for agentic workflows": "为智能体工作流设计的更新版工作区布局",
+  "A special toast for announcing new and exciting features.": "用于通告新功能的特殊提示。",
+  "Optional worktree isolation keeps agents from conflicting": "可选的工作树隔离可避免智能体相互冲突"
  },
  "zed/crates/ui/src/components/project_empty_state.rs": {
   "Open Project": "打开项目",
@@ -3383,7 +3485,18 @@
   "Failed to save the file.": "文件保存失败。",
   "Suppress with shift-click": "Shift 点击以抑制",
   "Header Actions (top right)": "标题栏操作（右上角）",
-  "With Primary Action (end icon)": "带主操作（末尾图标）"
+  "With Primary Action (end icon)": "带主操作（末尾图标）",
+  "A regular informational notification.": "常规信息通知。",
+  "Default header with just a close button.": "只有关闭按钮的默认标题栏。",
+  "Some informational content for the user.": "给用户的一些提示内容。",
+  "Linux desktop portal initialization failed.": "Linux 桌面门户初始化失败。",
+  "This notification can't be closed manually.": "此通知无法手动关闭。",
+  "Check your network connection and try again.": "请检查网络连接后重试。",
+  "This message can be copied to the clipboard.": "此消息可复制到剪贴板。",
+  "An update is required to continue using Zed AI.": "需要更新后才能继续使用 Zed AI。",
+  "Something went wrong while loading your project.": "加载项目时出错了。",
+  "Zed needs an xdg-desktop-portal implementation to open files.": "Zed 需要 xdg-desktop-portal 实现才能打开文件。",
+  "Error: Prepare rename via rust-analyzer failed: No references found at position": "错误：通过 rust-analyzer 准备重命名失败：在该位置未找到引用"
  },
  "zed/crates/workspace/src/pane.rs": {
   "you have unsaved changes": "您有未保存的更改",
@@ -3452,7 +3565,11 @@
   "Splits the pane to the left.": "向左拆分窗格。",
   "Splits the pane horizontally.": "水平拆分窗格。",
   "Splits the pane to the right.": "向右拆分窗格。",
-  "This will make this tab editable": "这会使该标签页可编辑"
+  "This will make this tab editable": "这会使该标签页可编辑",
+  "Do you want to save changes to the following files?": "要保存以下文件的更改吗？",
+  "Could not translate the dropped paths into WSL paths": "无法将拖入的路径转换为 WSL 路径",
+  "Cannot drop local files on a remote SSH/Docker project": "无法将本地文件拖入远程 SSH/Docker 项目",
+  "This buffer contains unsaved edits. Do you want to save it?": "此缓冲区有未保存的更改。要保存吗？"
  },
  "zed/crates/workspace/src/pane_group.rs": {
   "Follow {} to their active project": "跟随 {} 到他们的活动项目",
@@ -3485,7 +3602,12 @@
   "Clearing old bookmarks": "正在清理旧书签",
   "Clearing old breakpoints": "正在清理旧断点",
   "No workspace found for id": "未找到该 ID 对应的工作区",
-  "Clearing old user toolchains": "正在清理旧用户工具链"
+  "Clearing old user toolchains": "正在清理旧用户工具链",
+  "Loading recent navigation history": "正在加载最近的导航历史",
+  "Clearing recent navigation history": "正在清理最近的导航历史",
+  "Inserting recent navigation history": "正在插入最近的导航历史",
+  "Bookmarks are empty after querying database for them": "查询数据库后书签仍为空",
+  "Breakpoints are empty after querying database for them": "查询数据库后断点仍为空"
  },
  "zed/crates/workspace/src/security_modal.rs": {
   "Open in Restricted": "以受限模式打开",
@@ -3498,7 +3620,13 @@
   "Trust all single files": "信任所有单个文件",
   "Home directory not available": "主目录不可用",
   "Enter an absolute folder path": "输入文件夹的绝对路径",
-  "Language servers from running": "阻止语言服务器运行"
+  "Language servers from running": "阻止语言服务器运行",
+  "Project settings from being applied": "阻止应用项目设置",
+  "Must be a parent folder of the project": "必须是项目的上级文件夹",
+  "MCP Server integrations from installing": "阻止安装 MCP 服务器集成",
+  "Trust all projects in the parent folders": "信任上级文件夹中的所有项目",
+  "Path must be relative to the home directory": "路径必须相对于主目录",
+  "Untrusted projects are opened in Restricted Mode to protect your system.": "不受信任的项目会在受限模式下打开，以保护你的系统。"
  },
  "zed/crates/workspace/src/status_bar.rs": {
   "Open Threads Sidebar": "打开会话侧栏"
@@ -3605,7 +3733,12 @@
   "Please update to continue.": "请更新后继续。",
   "Please sign in to continue.": "请登录后继续。",
   "There must be an active pane": "必须有一个活动窗格",
-  "Do you want to switch channels?": "你想切换频道吗？"
+  "Do you want to switch channels?": "你想切换频道吗？",
+  "Please check the link and try again.": "请检查链接后重试。",
+  "Please ask someone to add you and try again.": "请让对方添加你后重试。",
+  "Leaving this call will unshare your current project.": "离开此通话将取消共享当前项目。",
+  "Do you want to save all changes in the following files?": "要保存以下文件中的所有更改吗？",
+  "Could not find a focus target when switching focus to the center panes": "将焦点切换到中间窗格时找不到焦点目标"
  },
  "zed/crates/workspace/src/workspace_error.rs": {
   "See docs": "查看文档"
@@ -3664,12 +3797,19 @@
   "Failed to create themes dir at path {themes_dir:?}": "创建主题目录失败，路径为 {themes_dir:?}",
   "Reopen in Dev Container": "在开发容器中重新打开",
   "Failed to parse JSON Schema": "解析 JSON Schema 失败",
-  "Failed to serialize action schema": "序列化操作 schema 失败"
+  "Failed to serialize action schema": "序列化操作 schema 失败",
+  "Failed to open builtin JSON Schema": "打开内置 JSON Schema 失败",
+  "Failed to serialize schema definitions": "序列化 schema 定义失败",
+  "Failed to serialize JSON Schema as JSON": "将 JSON Schema 序列化为 JSON 失败",
+  "Failed to restore 1 workspace. Check logs for details.": "恢复 1 个工作区失败。详情请查看日志。",
+  "All workspace restorations failed. Opening fallback empty workspace.": "所有工作区恢复均失败。正在打开回退的空工作区。",
+  "Failed to load conpty.dll. Terminal will work with reduced functionality.": "加载 conpty.dll 失败。终端功能将受限。"
  },
  "zed/crates/zed/src/visual_test_runner.rs": {
   "Hello, world!": "你好，世界！",
   "Configure Providers": "配置提供者",
-  "Test Your Rules": "测试你的规则"
+  "Test Your Rules": "测试你的规则",
+  "Add line numbers option to FileEditBlock": "为 FileEditBlock 添加行号选项"
  },
  "zed/crates/zed/src/zed.rs": {
   "Open Source License Attribution": "开源许可证归属",
@@ -3715,7 +3855,9 @@
   "Accessibility Tree": "无障碍树",
   "Partial file index": "部分文件索引",
   "Set up new worktree": "设置新工作树",
-  "Default Semantic Token Rules": "默认语义标记规则"
+  "Default Semantic Token Rules": "默认语义标记规则",
+  "Could not start ReadDirectoryChangesW": "无法启动 ReadDirectoryChangesW",
+  "Error: Prepare rename via rust-analyzer failed: No references found at position": "错误：通过 rust-analyzer 准备重命名失败：在该位置未找到引用"
  },
  "zed/crates/zed/src/zed/app_menus.rs": {
   "Zoom In": "放大",
@@ -3825,7 +3967,9 @@
   "Debugger Panel": "调试面板",
   "Find in Project": "在项目中查找",
   "Open Project Settings File": "打开项目设置文件",
-  "Select Previous Occurrence": "选择上一个出现位置"
+  "Select Previous Occurrence": "选择上一个出现位置",
+  "Show Incoming Calls": "显示调用者",
+  "Show Outgoing Calls": "显示被调用者"
  },
  "zed/crates/zed/src/zed/mac_only_instance.rs": {
   "Zed Editor Dev Instance Running": "Zed 编辑器开发实例正在运行",
@@ -3887,7 +4031,9 @@
   "Inline Values": "内联值",
   "Semantic Highlights": "语义高亮",
   "No Code Actions Available": "没有可用的代码操作",
-  "Diff Against Default Branch": "与默认分支比较"
+  "Diff Against Default Branch": "与默认分支比较",
+  "Inline diagnostics are not available until regular diagnostics are enabled.": "启用常规诊断后才能使用内联诊断。",
+  "Add to Agent Thread": "添加到智能体线程"
  },
  "zed/crates/zed/src/zed/quick_action_bar/preview.rs": {
   "Preview Markdown": "预览 Markdown",
@@ -3915,7 +4061,9 @@
  "zed/crates/zed/src/zed/telemetry_log.rs": {
   "Telemetry Log": "遥测日志",
   "Filter events...": "筛选事件…",
-  "No telemetry events recorded yet": "暂无遥测事件记录"
+  "No telemetry events recorded yet": "暂无遥测事件记录",
+  "No events match the current filter": "没有事件匹配当前筛选条件",
+  "1 telemetry log entry failed to parse": "1 条遥测日志解析失败"
  },
  "zed/crates/zed/src/zed/windows_only_instance.rs": {
   "error parsing path argument: {}": "解析路径参数时出错: {}",
@@ -3954,7 +4102,8 @@
   "Number Field": "数字字段",
   "Reset to Default": "重置为默认",
   "Editable Number Field": "可编辑数字字段",
-  "Button-Only Number Field": "仅按钮数字字段"
+  "Button-Only Number Field": "仅按钮数字字段",
+  "A numeric input element with increment and decrement buttons.": "带增减按钮的数字输入框。"
  },
  "zed/crates/settings_ui/src/components/font_picker.rs": {
   "Search fonts…": "搜索字体…"
@@ -3990,7 +4139,8 @@
   "Both Icons": "双图标",
   "Icon Color": "图标颜色",
   "Start Icon": "起始图标",
-  "This is a tooltip": "这是一条工具提示"
+  "This is a tooltip": "这是一条工具提示",
+  "A button triggers an event or action.": "按钮用于触发事件或操作。"
  },
  "zed/crates/ui/src/components/list/list.rs": {
   "No items": "无条目",
@@ -4004,7 +4154,8 @@
   "No watch roots.": "没有监视根目录。",
   "Scan Exclusions": "扫描排除项",
   "Permission denied": "没有权限",
-  "No local projects are open.": "没有打开的本地项目。"
+  "No local projects are open.": "没有打开的本地项目。",
+  "Live native and polling watch roots across the app.": "在整个应用中实时监视原生与轮询根目录。"
  },
  "zed/crates/ui/src/components/collab/update_button.rs": {
   "Up to Date": "已是最新",
@@ -4014,7 +4165,8 @@
   "Update Zed": "更新 Zed"
  },
  "zed/crates/ui/src/components/count_badge.rs": {
-  "Count Badge": "计数徽标"
+  "Count Badge": "计数徽标",
+  "A small, pill-shaped badge that displays a numeric count.": "显示数字计数的小号胶囊形徽标。"
  },
  "zed/crates/ui/src/components/tab.rs": {
   "Default Tab": "默认标签",
@@ -4023,7 +4175,8 @@
  "zed/crates/project_panel/src/undo.rs": {
   "Redo Failed": "重做失败",
   "Undo Failed": "撤销失败",
-  "Failed to obtain workspace.": "获取工作区失败。"
+  "Failed to obtain workspace.": "获取工作区失败。",
+  "Undo and redo task can not keep up": "撤销与重做无法跟上"
  },
  "zed/crates/ui/src/components/label/highlighted_label.rs": {
   "Single Line": "单行",
@@ -4033,7 +4186,9 @@
   "Highlighted Text": "高亮文本",
   "Italic Highlight": "斜体高亮",
   "Colored Highlight": "彩色高亮",
-  "Underlined Highlight": "下划线高亮"
+  "Underlined Highlight": "下划线高亮",
+  "A label with highlighted characters based on specified indices.": "按指定索引高亮字符的标签。",
+  "This is a very long text that should be truncated with highlights": "这是一段很长的文本，应带高亮截断显示"
  },
  "zed/crates/ui/src/components/divider.rs": {
   "Border Color": "边框颜色"
@@ -4053,7 +4208,8 @@
   "Elevated Surface": "浮起表面"
  },
  "zed/crates/ui/src/components/choice_card.rs": {
-  "Invalid option": "无效选项"
+  "Invalid option": "无效选项",
+  "A longer explanation of what this option does.": "对此选项作用的更详细说明。"
  },
  "zed/crates/title_bar/src/update_version.rs": {
   "Network timeout": "网络超时"
@@ -4063,7 +4219,8 @@
   "Multiple Row Group": "多行分组"
  },
  "zed/crates/zed/src/zed/migrate.rs": {
-  "Backup and Update": "备份并更新"
+  "Backup and Update": "备份并更新",
+  "Failed to create settings backup in home directory": "在主目录创建设置备份失败"
  },
  "zed/crates/git_ui/src/clone.rs": {
   "Add repo to project": "将仓库添加到项目",
@@ -4083,10 +4240,20 @@
  "zed/crates/zed/src/reliability.rs": {
   "Failed to read minidump": "读取 minidump 失败",
   "Minidump endpoint not set": "未设置 minidump 端点",
-  "The GPU Zed is running on": "Zed 正在使用的显卡"
+  "The GPU Zed is running on": "Zed 正在使用的显卡",
+  "No commit sha set, skipping minidump upload": "未设置提交 SHA，跳过 minidump 上传"
  },
  "zed/crates/ui/src/components/toggle.rs": {
-  "Tooltip with Description": "带描述的工具提示"
+  "Tooltip with Description": "带描述的工具提示",
+  "This is content for this tooltip!": "这是此工具提示的内容！",
+  "This uses the accent color scheme.": "此组件使用强调色配色。",
+  "This uses the default switch color.": "此组件使用默认开关颜色。",
+  "Enable advanced configuration options.": "启用高级配置选项。",
+  "This field is disabled and cannot be toggled.": "此字段已禁用，无法切换。",
+  "Receive notifications when new messages arrive.": "新消息到达时接收通知。",
+  "A switch component that represents binary states like on/off": "表示开/关等二值状态的开关组件",
+  "A field component that combines a label, description, and switch": "组合标签、描述和开关的字段组件",
+  "A checkbox component that can be used for multiple choice selections": "可用于多选的复选框组件"
  },
  "zed/crates/ui/src/components/chip.rs": {
   "Customized Background Color": "自定义背景色"
@@ -4097,5 +4264,69 @@
  "zed/crates/workspace/src/multi_workspace.rs": {
   "Window is not a MultiWorkspace": "窗口不是 MultiWorkspace",
   "Remote connection was cancelled": "远程连接已取消"
+ },
+ "zed/crates/ui/src/components/avatar.rs": {
+  "Indicates the collaborator's mic is muted.": "表示协作者的麦克风已静音。",
+  "Indicates that both the collaborator's mic and audio are muted.": "表示协作者的麦克风与音频均已静音。"
+ },
+ "zed/crates/ui/src/components/list/list_bullet_item.rs": {
+  "A list item with a dash indicator for unordered lists.": "无序列表的条目，带短横线项目符号。",
+  "A longer bullet item that demonstrates text wrapping behavior": "演示文本换行行为的较长列表项"
+ },
+ "zed/crates/workspace/src/tasks.rs": {
+  "Cannot schedule tasks when disconnected from a remote host": "与远程主机断开连接时无法安排任务"
+ },
+ "zed/crates/ui/src/components/image.rs": {
+  "A vector image component that can be displayed at specific sizes.": "可按指定尺寸显示的矢量图组件。"
+ },
+ "zed/crates/ui/src/components/keybinding_hint.rs": {
+  "Displays a keyboard shortcut hint with optional prefix and suffix text": "显示带可选前后缀文本的快捷键提示"
+ },
+ "zed/crates/ui/src/components/data_table.rs": {
+  "A table component for displaying data in rows and columns with optional styling.": "以行列形式显示数据的表格组件，可选样式。"
+ },
+ "zed/crates/editor/src/test/editor_lsp_test_context.rs": {
+  "Git Commit": "Git 提交"
+ },
+ "zed/crates/languages/src/lib.rs": {
+  "Git Commit": "Git 提交"
+ },
+ "zed/crates/editor/src/code_lens.rs": {
+  "0 references": "0 个引用"
+ },
+ "zed/crates/remote_server/src/remote_editing_tests.rs": {
+  "0 references": "0 个引用"
+ },
+ "zed/crates/editor/src/code_actions.rs": {
+  "Toggle Code Actions": "切换代码操作"
+ },
+ "zed/crates/languages/src/rust.rs": {
+  "Failed to create REGEX": "创建正则失败"
+ },
+ "zed/crates/languages/src/vtsls.rs": {
+  "Failed to create REGEX": "创建正则失败"
+ },
+ "zed/crates/keymap_editor/src/keymap_editor.rs": {
+  "Failed to create buffer": "创建缓冲区失败"
+ },
+ "zed/crates/editor/src/clipboard.rs": {
+  "Clipboard doesn't contain text.": "剪贴板中没有文本。"
+ },
+ "zed/crates/editor/src/emmet_ext.rs": {
+  "Emmet abbreviation, e.g. ul>li*": "Emmet 缩写，例如 ul>li*",
+  "Wrapping with an Emmet abbreviation is not available for the selected text": "所选文本无法用 Emmet 缩写包裹"
+ },
+ "zed/crates/editor/src/bookmarks.rs": {
+  "Enter bookmark label (Optional)": "输入书签标签（可选）"
+ },
+ "zed/crates/editor/src/lsp_ext.rs": {
+  "Timed out waiting for LSP tasks": "等待 LSP 任务超时"
+ },
+ "zed/crates/editor/src/selections_collection.rs": {
+  "There must be at least one selection": "至少要有一个选区"
+ },
+ "zed/crates/editor/src/jsx_tag_auto_close.rs": {
+  "Auto-close Operation Failed - Failed to compute edits": "自动闭合操作失败 - 无法计算编辑",
+  "Auto-close Operation Failed - Buffer has edits since start": "自动闭合操作失败 - 缓冲区已有编辑"
  }
 }
