@@ -106,6 +106,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: zed-windows-${{ env.STAMP }}
+          if-no-files-found: error
           path: |
             zed-windows-*.zip
             sha256sums.txt
