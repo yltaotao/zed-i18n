@@ -63,7 +63,24 @@ jobs:
 
       - name: 编译
         working-directory: zed
-        run: cargo build --release --jobs 4
+        run: |
+          cargo build --release --jobs 4 *>&1 | Tee-Object -FilePath build.log
+          if ($LASTEXITCODE -ne 0) { exit 1 }
+
+      - name: 记录失败日志
+        if: failure()
+        run: |
+          if (Test-Path zed/build.log) {
+            Get-Content zed/build.log -Tail 400 | Out-File last-error.txt -Encoding utf8
+          } else {
+            "构建未产生 zed/build.log（失败发生在编译之前）" | Out-File last-error.txt -Encoding utf8
+          }
+          Get-ChildItem zed -ErrorAction SilentlyContinue | Out-File -Append last-error.txt -Encoding utf8
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add last-error.txt
+          git commit -m "ci: 失败日志 $(Get-Date -Format yyyyMMdd-HHmm)" || echo "无变更"
+          git push origin HEAD:main
 
       - name: 打包
         run: |
