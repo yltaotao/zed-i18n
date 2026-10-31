@@ -1980,7 +1980,158 @@
   "Cursor Blinking": "光标闪烁",
   "Custom Digraphs": "自定义二合字母",
   "Dark Icon Theme": "深色图标主题",
-  "Data Collection": "数据收集"
+  "Data Collection": "数据收集",
+  "Debugger Button": "调试器按钮",
+  "Diff View Style": "差异视图样式",
+  "Enable Feedback": "启用反馈",
+  "Enable Git Diff": "启用 Git 差异",
+  "File Scan Depth": "文件扫描深度",
+  "Fullscreen Mode": "全屏模式",
+  "Git Integration": "Git 集成",
+  "Hide .gitignore": "隐藏 .gitignore",
+  "Icon Theme Name": "图标主题名称",
+  "Include Ignored": "包含被忽略项",
+  "LSP Completions": "LSP 补全",
+  "Layout Settings": "布局设置",
+  "Preview Channel": "预览通道",
+  "Scoped Settings": "作用域设置",
+  "Selected Symbol": "选中的符号",
+  "Selections Menu": "选择菜单",
+  "Semantic Tokens": "语义标记",
+  "Show Background": "显示背景",
+  "Show Turn Stats": "显示轮次统计",
+  "Show Type Hints": "显示类型提示",
+  "Terminal Button": "终端按钮",
+  "Title Separator": "标题分隔符",
+  "Update Debounce": "更新防抖",
+  "Window & Layout": "窗口与布局",
+  "Active File Name": "当前文件名",
+  "Agent Panel Dock": "智能体面板停靠位置",
+  "Agent Panel Font": "智能体面板字体",
+  "Alternate Scroll": "交替滚动",
+  "Code Font Family": "代码字体族",
+  "Cursor Animation": "光标动画",
+  "Display Settings": "显示设置",
+  "Drop Size Target": "拖放尺寸目标",
+  "Edit Debounce Ms": "编辑防抖（毫秒）",
+  "Edit Keybindings": "编辑快捷键",
+  "Expand Edit Card": "展开编辑卡片",
+  "Folder Indicator": "文件夹指示",
+  "General Settings": "通用设置",
+  "Git Gutter Width": "Git 行标记宽度",
+  "Git Panel Button": "Git 面板按钮",
+  "Inactive Opacity": "非活动不透明度",
+  "Light Icon Theme": "浅色图标主题",
+  "Max Idle Threads": "最大空闲线程数",
+  "Minimum Contrast": "最小对比度",
+  "Mouse Wheel Zoom": "滚轮缩放",
+  "Save Breakpoints": "保存断点",
+  "Show Author Name": "显示作者名",
+  "Show Branch Name": "显示分支名",
+  "Show Breakpoints": "显示断点",
+  "Show Count Badge": "显示计数徽标",
+  "Show Diagnostics": "显示诊断",
+  "Show Other Hints": "显示其他提示",
+  "Show Value Hints": "显示值提示",
+  "Show Whitespaces": "显示空白字符",
+  "Show Wrap Guides": "显示换行参考线",
+  "Soft Wrap Indent": "自动换行缩进",
+  "Thinking Display": "思考过程显示",
+  "Tool Permissions": "工具权限",
+  "Words Min Length": "单词最短长度",
+  "Activate On Close": "关闭时激活",
+  "Active Line Width": "当前行宽",
+  "Advanced Settings": "高级设置",
+  "Behavior Settings": "行为设置",
+  "Colorize Brackets": "括号着色",
+  "Diagnostic Badges": "诊断徽标",
+  "Enable Git Status": "启用 Git 状态",
+  "Horizontal Scroll": "水平滚动",
+  "Languages & Tools": "语言与工具",
+  "Max Content Width": "最大内容宽度",
+  "Max Width Columns": "最大宽度列数",
+  "Rounded Selection": "圆角选区",
+  "Scroll Multiplier": "滚动倍率",
+  "Settings Profiles": "设置配置",
+  "Show Close Button": "显示关闭按钮",
+  "Show Line Numbers": "显示行号",
+  "Show User Picture": "显示用户头像",
+  "Show breadcrumbs.": "显示面包屑导航。",
+  "Telemetry Metrics": "遥测指标",
+  "Use Auto Surround": "自动包围",
+  "Word Diff Enabled": "启用单词级差异",
+  "Working Directory": "工作目录",
+  "Agent Panel Button": "智能体面板按钮",
+  "Bold Folder Labels": "文件夹标签加粗",
+  "Bottom Dock Layout": "底部停靠布局",
+  "Custom Line Height": "自定义行高",
+  "Diagnostics Button": "诊断按钮",
+  "Input Audio Device": "输入音频设备",
+  "JSX Tag Auto Close": "JSX 标签自动闭合",
+  "LSP Folding Ranges": "LSP 折叠范围",
+  "Language Detection": "语言检测",
+  "Middle Click Paste": "中键粘贴",
+  "Outline Panel Dock": "大纲面板停靠位置",
+  "Pinned Tabs Layout": "固定标签布局",
+  "Prevent Idle Sleep": "阻止空闲休眠",
+  "Project Panel Dock": "项目面板停靠位置",
+  "Restore File State": "恢复文件状态",
+  "Restore On Startup": "启动时恢复",
+  "Scroll Debounce Ms": "滚动防抖（毫秒）",
+  "Scroll Sensitivity": "滚动灵敏度",
+  "Show Indent Guides": "显示缩进参考线",
+  "Show Project Items": "显示项目条目",
+  "Show Worktree Name": "显示工作树名称",
+  "Single File Review": "单文件审查",
+  "Snippet Sort Order": "片段排序方式",
+  "Suggest Extensions": "推荐扩展",
+  "Tab Close Position": "标签关闭按钮位置",
+  "Use On Type Format": "输入时格式化",
+  "Use Smartcase Find": "智能大小写查找",
+  "Use System Prompts": "使用系统提示词",
+  "Vertical Scrollbar": "垂直滚动条",
+  "Window Decorations": "窗口装饰",
+  "Agent Configuration": "智能体配置",
+  "Auto Fetch Interval": "自动获取间隔",
+  "Auto Reveal Entries": "自动显示条目",
+  "Background Coloring": "背景着色",
+  "Collaboration Panel": "协作面板",
+  "Debugger Panel Dock": "调试面板停靠位置",
+  "Focus Follows Mouse": "焦点跟随鼠标",
+  "Heading Font Weight": "标题字重",
+  "Inline Code Actions": "行内代码操作",
+  "LSP Document Colors": "LSP 文档颜色",
+  "Limit Content Width": "限制内容宽度",
+  "Line Endings Button": "行尾符按钮",
+  "Open Menus on Hover": "悬停时打开菜单",
+  "Output Audio Device": "输出音频设备",
+  "Scan Symbolic Links": "扫描符号链接",
+  "Selection Highlight": "选区高亮",
+  "Show Commit Summary": "显示提交摘要",
+  "Show Which-key Menu": "显示 Which-key 菜单",
+  "Text Rendering Mode": "文本渲染模式",
+  "Use Command History": "使用命令历史",
+  "Auto Indent On Paste": "粘贴时自动缩进",
+  "Autoscroll On Clicks": "点击时自动滚动",
+  "Close on File Delete": "文件删除时关闭",
+  "Custom Button Layout": "自定义按钮布局",
+  "Delay (milliseconds)": "延迟（毫秒）",
+  "Expand Excerpt Lines": "展开摘录行",
+  "Expand Terminal Card": "展开终端卡片",
+  "Fallback Branch Name": "备用分支名",
+  "File Scan Exclusions": "文件扫描排除项",
+  "File Scan Inclusions": "文件扫描包含项",
+  "Git Status Indicator": "Git 状态指示",
+  "Horizontal Scrollbar": "水平滚动条",
+  "LSP Document Symbols": "LSP 文档符号",
+  "LSP Pull Diagnostics": "LSP 拉取诊断",
+  "LSP Results Location": "LSP 结果位置",
+  "Outline Panel Button": "大纲面板按钮",
+  "Pane Split Direction": "窗格拆分方向",
+  "Performance Profiler": "性能分析器",
+  "Preview Tabs Enabled": "启用预览标签页",
+  "Project Panel Button": "项目面板按钮",
+  "Show Parameter Hints": "显示参数提示"
  },
  "zed/crates/settings_ui/src/pages/edit_prediction_provider_setup.rs": {
   "Select which provider to use for edit predictions.": "选择用于编辑预测的服务提供方。",
@@ -1989,7 +2140,12 @@
   "Reset Key": "重置按键",
   "Max Tokens": "最大 Token 数",
   "Prompt Format": "提示词格式",
-  "Active Provider": "当前服务商"
+  "Active Provider": "当前服务商",
+  "No provider set": "未设置服务商",
+  "Zed Predictions": "Zed 预测",
+  "Max Output Tokens": "最大输出 Token 数",
+  "API Key Configured": "API 密钥已配置",
+  "Prediction Debounce": "预测防抖"
  },
  "zed/crates/settings_ui/src/pages/external_agents_page.rs": {
   "External Agents": "外部智能体",
@@ -2001,7 +2157,11 @@
   "Edit in settings.json": "在 settings.json 中编辑",
   "ACP Docs": "ACP 文档",
   "Agent Name": "智能体名称",
-  "Configure Agent": "配置智能体"
+  "Configure Agent": "配置智能体",
+  "Add Custom Agent": "添加自定义智能体",
+  "Agent Configuration": "智能体配置",
+  "Remove Custom Agent": "移除自定义智能体",
+  "Command is required.": "命令为必填项。"
  },
  "zed/crates/settings_ui/src/pages/llm_providers_page.rs": {
   "Configure Provider": "配置提供商",
@@ -2018,7 +2178,12 @@
   "Remove Model": "移除模型",
   "Provider Name": "服务商名称",
   "Supports tools": "支持工具",
-  "Compatible APIs": "兼容 API"
+  "Compatible APIs": "兼容 API",
+  "Supports images": "支持图片",
+  "Max Output Tokens": "最大输出 Token 数",
+  "Supports thinking": "支持思考",
+  "API Key Configured": "API 密钥已配置",
+  "Agent Configuration": "智能体配置"
  },
  "zed/crates/settings_ui/src/pages/mcp_servers_page.rs": {
   "Manage servers connected directly or via extensions.": "管理直接连接或通过扩展连接的服务器。",
@@ -2032,7 +2197,17 @@
   "1 tool": "1 个工具",
   "Invalid URL": "无效地址",
   "Server Name": "服务器名称",
-  "Bearer token": "Bearer 令牌"
+  "Bearer token": "Bearer 令牌",
+  "OAuth Client ID": "OAuth 客户端 ID",
+  "Add Local Server": "添加本地服务器",
+  "URL is required.": "URL 为必填项。",
+  "Add Remote Server": "添加远程服务器",
+  "Timeout (seconds)": "超时（秒）",
+  "Configured Servers": "已配置的服务器",
+  "MCP Server Timeout": "MCP 服务器超时",
+  "Agent Configuration": "智能体配置",
+  "Add Local MCP Server": "添加本地 MCP 服务器",
+  "Command is required.": "命令为必填项。"
  },
  "zed/crates/settings_ui/src/pages/sandbox_settings.rs": {
   "Learn more about sandboxing": "进一步了解沙箱",
@@ -2043,7 +2218,10 @@
   "Remove Domain": "移除域名",
   "Enable Sandbox": "启用沙箱",
   "Writable Paths": "可写路径",
-  "Allowed Domains": "允许的域名"
+  "Allowed Domains": "允许的域名",
+  "Allow All Domains": "允许所有域名",
+  "Escalation Prompts": "升级提示",
+  "Nothing configured": "尚未配置"
  },
  "zed/crates/settings_ui/src/pages/skill_creator.rs": {
   "failed to read response body": "读取响应体失败",
@@ -2053,7 +2231,12 @@
   "Code Review": "代码审查",
   "File exists": "文件已存在",
   "Skill Content": "技能内容",
-  "Imported Skill": "导入的技能"
+  "Imported Skill": "导入的技能",
+  "Import from URL": "从 URL 导入",
+  "Push a draft PR": "推送草稿 PR",
+  "Body is required.": "请求体为必填项。",
+  "Body of the skill.": "技能正文。",
+  "GitHub returned 500": "GitHub 返回 500"
  },
  "zed/crates/settings_ui/src/pages/skills_setup.rs": {
   "Create a Skill": "创建技能",
@@ -2074,7 +2257,14 @@
   "Delete Path": "删除路径",
   "Always Confirm": "始终确认",
   "Default Action": "默认操作",
-  "Delete Pattern": "删除模式"
+  "Delete Pattern": "删除模式",
+  "Test Your Rules": "测试你的规则",
+  "Create Directory": "创建目录",
+  "Invalid Patterns": "无效模式",
+  "Tool Permissions": "工具权限",
+  "Default Permission": "默认权限",
+  "Directory creation": "目录创建",
+  "Web search queries": "网页搜索请求"
  },
  "zed/crates/settings_ui/src/settings_ui.rs": {
   "Configure": "配置",
@@ -2106,7 +2296,15 @@
   "Focus Content": "聚焦内容",
   "LLM Providers": "大模型服务商",
   "Tall final row": "末行加高",
-  "Zed — Settings": "Zed — 设置"
+  "Zed — Settings": "Zed — 设置",
+  "Enable Git Diff": "启用 Git 差异",
+  "Search Settings": "搜索设置",
+  "Reset to Default": "重置为默认",
+  "Settings Content": "设置内容",
+  "Enable Git Status": "启用 Git 状态",
+  "No root entry found": "未找到根条目",
+  "View Other Projects": "查看其他项目",
+  "Fallback Branch Name": "备用分支名"
  },
  "zed/crates/sidebar/src/sidebar.rs": {
   "Search threads…": "搜索线程…",
@@ -2650,7 +2848,8 @@
  },
  "zed/crates/zed/src/visual_test_runner.rs": {
   "Hello, world!": "你好，世界！",
-  "Configure Providers": "配置提供者"
+  "Configure Providers": "配置提供者",
+  "Test Your Rules": "测试你的规则"
  },
  "zed/crates/zed/src/zed.rs": {
   "Open Source License Attribution": "开源许可证归属",
@@ -2909,7 +3108,8 @@
   "Bearer token": "Bearer 令牌"
  },
  "zed/crates/settings_ui/src/components/number_field.rs": {
-  "Number Field": "数字字段"
+  "Number Field": "数字字段",
+  "Reset to Default": "重置为默认"
  },
  "zed/crates/settings_ui/src/components/font_picker.rs": {
   "Search fonts…": "搜索字体…"
@@ -2918,9 +3118,22 @@
   "Search theme…": "搜索主题…"
  },
  "zed/crates/settings_ui/src/components/ollama_model_picker.rs": {
-  "Search models…": "搜索模型…"
+  "Search models…": "搜索模型…",
+  "Loading models…": "正在加载模型…"
  },
  "zed/crates/settings_ui/src/pages/audio_input_output_setup.rs": {
   "System Default": "系统默认"
+ },
+ "zed/crates/language_tools/src/highlights_tree_view.rs": {
+  "Semantic Tokens": "语义标记"
+ },
+ "zed/crates/settings_ui/src/components/input_field.rs": {
+  "Enter to Confirm": "按 Enter 确认"
+ },
+ "zed/crates/debugger_ui/src/new_process_modal.rs": {
+  "Working Directory": "工作目录"
+ },
+ "zed/crates/settings_ui/src/components/icon_theme_picker.rs": {
+  "Search icon themes…": "搜索图标主题…"
  }
 }
