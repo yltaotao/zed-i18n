@@ -1,44 +1,49 @@
+"""把词典里的中文替换进 Zed 源码。
+
+用法:
+    python replace.py [zh.json]
+
+词典格式 {相对路径: {源码字面量: 中文}}，两边的键和值都是「源码里的转义形态」，
+因此匹配是逐字节精确的，不依赖转义还原。
+"""
+
 import json
 import re
-import os
 import sys
+from pathlib import Path
 
-# 检查是否有命令行参数
-if len(sys.argv) > 1:
-    json_file_path = sys.argv[1]
-    print(f'Using JSON file: {json_file_path}')
-else:
-    # 定义文件路径，自行修改词条文件名
-    json_file_path = 'zh.json'
 
-missing_files = []
+def main() -> int:
+    dict_path = Path(sys.argv[1] if len(sys.argv) > 1 else "zh.json")
+    data = json.loads(dict_path.read_text(encoding="utf-8"))
 
-# 读取JSON文件内容
-with open(json_file_path, 'r', encoding='utf-8') as json_file:
-    json_data = json.load(json_file)
+    missing_files: list[str] = []
+    entries = replaced = 0
 
-# 遍历JSON数据
-for file_path, replacements in json_data.items():
-    if not os.path.exists(file_path):
-        missing_files.append(file_path)
-        continue
+    for rel_path, messages in data.items():
+        target = Path(rel_path)
+        if not target.exists():
+            missing_files.append(rel_path)
+            continue
 
-    # 读取原始文件内容
-    with open(file_path, 'r', encoding='utf-8') as file:
-        content = file.read()
+        text = target.read_text(encoding="utf-8")
+        for literal in sorted(messages, key=len, reverse=True):
+            translation = messages[literal]
+            if not translation:
+                continue
+            entries += 1
+            pattern = '"' + re.escape(literal) + '"'
+            text, count = re.subn(pattern, lambda _m, t=translation: '"' + t + '"', text)
+            replaced += count
+        target.write_text(text, encoding="utf-8")
 
-    # 替换非空值
-    for original, new_value in replacements.items():
-        if new_value:  # 如果值不为空
-            content = re.sub(rf'"{re.escape(original)}"', f'"{new_value}"', content)
+    print(f"替换 {replaced} 处，词条 {entries} 条，文件 {len(data)} 个")
+    if missing_files:
+        print(f"以下 {len(missing_files)} 个文件在上游已不存在：")
+        for item in missing_files:
+            print("  " + item)
+    return 0
 
-    # 将修改后的内容写回文件
-    with open(file_path, 'w', encoding='utf-8') as file:
-        file.write(content)
 
-print('Successfully replaced strings in the original files')
-
-if missing_files:
-    print('The following files were not found:')
-    for missing_file in missing_files:
-        print(missing_file)
+if __name__ == "__main__":
+    raise SystemExit(main())
