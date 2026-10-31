@@ -12,6 +12,9 @@ import re
 import sys
 from pathlib import Path
 
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
 
 def main() -> int:
     dict_path = Path(sys.argv[1] if len(sys.argv) > 1 else "zh.json")
@@ -37,11 +40,14 @@ def main() -> int:
             replaced += count
         target.write_text(text, encoding="utf-8")
 
-    print(f"替换 {replaced} 处，词条 {entries} 条，文件 {len(data)} 个")
+    print(f"replaced {replaced} occurrences, {entries} entries, {len(data)} files")
     if missing_files:
-        print(f"以下 {len(missing_files)} 个文件在上游已不存在：")
+        print(f"{len(missing_files)} files no longer exist upstream:")
         for item in missing_files:
             print("  " + item)
+    if replaced == 0:
+        print("ERROR: nothing was replaced - dictionary keys or checkout path are wrong")
+        return 1
     return 0
 
 

@@ -50,7 +50,16 @@ jobs:
           python-version: "3.12"
 
       - name: 替换词条
+        env:
+          PYTHONIOENCODING: utf-8
         run: python replace.py
+
+      - name: 确认替换生效
+        run: |
+          $files = Get-ChildItem zed/crates -Recurse -Filter *.rs
+          $hit = ($files | Select-String -Pattern '[\u4e00-\u9fff]' -List | Measure-Object).Count
+          Write-Host "含中文的源码文件数: $hit"
+          if ($hit -lt 100) { Write-Error "替换没有生效（含中文文件过少）"; exit 1 }
 
       - uses: dtolnay/rust-toolchain@stable
         with:
