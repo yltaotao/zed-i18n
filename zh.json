@@ -255,7 +255,8 @@
  },
  "zed/crates/cli/src/main.rs": {
   "Unable to create instance sync event": "无法创建实例同步事件",
-  "Could not determine app path for {}": "无法确定 {} 的应用程序路径"
+  "Could not determine app path for {}": "无法确定 {} 的应用程序路径",
+  "Reopen in Dev Container": "在开发容器中重新打开"
  },
  "zed/crates/client/src/client.rs": {
   "upgrade required": "需要升级",
@@ -890,7 +891,11 @@
   "Local Branches": "本地分支",
   "Filter Branches": "筛选分支",
   "Remote Branches": "远程分支",
-  "Force Delete Branch": "强制删除分支"
+  "Force Delete Branch": "强制删除分支",
+  "Failed to create remote": "创建远程失败",
+  "Remote name can't be empty": "远程名称不能为空",
+  "Based off the current branch": "基于当前分支",
+  "Delete Local Tracking Branch": "删除本地跟踪分支"
  },
  "zed/crates/git_ui/src/commit_context_menu.rs": {
   "Learn More": "了解更多",
@@ -904,7 +909,8 @@
  },
  "zed/crates/git_ui/src/commit_tooltip.rs": {
   "<no name>": "<无名>",
-  "Error parsing date": "日期解析出错"
+  "Error parsing date": "日期解析出错",
+  "Fetch Missing History": "获取缺失的历史"
  },
  "zed/crates/git_ui/src/commit_view.rs": {
   "Buffer Search": "缓冲区搜索",
@@ -912,11 +918,18 @@
   "Commit SHA": "提交 SHA",
   "Copy Commit SHA": "复制提交 SHA",
   "Load File Snapshot": "加载文件快照",
-  "Load Full Snapshot": "加载完整快照"
+  "Load Full Snapshot": "加载完整快照",
+  "Fetch Missing History": "获取缺失的历史",
+  "Fold Commit Description": "折叠提交描述",
+  "Expand Commit Description": "展开提交描述",
+  "Stash has changed, pop aborted": "贮藏已变更，弹出已中止",
+  "Stash has changed, drop aborted": "贮藏已变更，删除已中止",
+  "Stash has changed, not applying": "贮藏已变更，未应用"
  },
  "zed/crates/git_ui/src/conflict_view.rs": {
   "Use Both": "两者都用",
-  "Resolve with Agent": "用智能体解决"
+  "Resolve with Agent": "用智能体解决",
+  "Click to Resolve with Agent": "点击让智能体解决"
  },
  "zed/crates/git_ui/src/diff_multibuffer.rs": {
   "Remote up to date": "远程已更新"
@@ -945,7 +958,9 @@
   "Hide Commit Details": "隐藏提交详情",
   "Hide Commit Message": "隐藏提交信息",
   "Show Commit Details": "显示提交详情",
-  "Show Commit Message": "显示提交信息"
+  "Show Commit Message": "显示提交信息",
+  "Match Case Sensitivity": "匹配大小写敏感",
+  "No git graph to deserialize": "没有可反序列化的 Git 图"
  },
  "zed/crates/git_ui/src/git_panel.rs": {
   "Stage All": "暂存所有",
@@ -1084,7 +1099,19 @@
   "Create Pull Request": "创建拉取请求",
   "No unstaged changes": "没有未暂存的更改",
   "Tracked & Untracked": "已跟踪与未跟踪",
-  "View File Histories": "查看文件历史"
+  "View File Histories": "查看文件历史",
+  "Expand Commit Editor": "展开提交编辑器",
+  "Remove co-authored-by": "移除共同作者",
+  "Collapse Commit Editor": "折叠提交编辑器",
+  "Add Files to .gitignore": "将文件添加到 .gitignore",
+  "Add to .git/info/exclude": "添加到 .git/info/exclude",
+  "Failed to revert changes": "还原更改失败",
+  "Pick which remote to fetch": "选择要获取的远程仓库",
+  "Generating commit message...": "正在生成提交信息…",
+  "Pick which remote to push to": "选择要推送到的远程仓库",
+  "Failed to load commit history": "加载提交历史失败",
+  "Add Files to .git/info/exclude": "将文件添加到 .git/info/exclude",
+  "All conflicts marked as resolved": "所有冲突已标记为解决"
  },
  "zed/crates/git_ui/src/git_ui.rs": {
   "Fetch": "获取",
@@ -1110,7 +1137,10 @@
   "Push To": "推送到",
   "Fetch From": "获取自",
   "Pull (Rebase)": "拉取（变基）",
-  "View commit failed": "查看提交失败"
+  "View commit failed": "查看提交失败",
+  "Failed to create tag": "创建标签失败",
+  "Operation was canceled": "操作已取消",
+  "Failed to rename branch": "重命名分支失败"
  },
  "zed/crates/git_ui/src/project_diff.rs": {
   "Git Diff Opened": "已打开 Git 差异",
@@ -1130,7 +1160,9 @@
   "Commit": "提交",
   "Staged Changes": "已暂存的更改",
   "Go to Next Hunk": "跳到下一个变更块",
-  "Unstaged Changes": "未暂存的更改"
+  "Unstaged Changes": "未暂存的更改",
+  "Stage and Go to Next Hunk": "暂存并跳到下一个变更块",
+  "Unstage and Go to Next Hunk": "取消暂存并跳到下一个变更块"
  },
  "zed/crates/git_ui/src/remote_output.rs": {
   "Create a pull request": "创建拉取请求",
@@ -1150,7 +1182,11 @@
   "View Merge Request": "查看合并请求",
   "View merge request": "查看合并请求",
   "Create Pull Request": "创建拉取请求",
-  "Create pull request": "创建拉取请求"
+  "Create pull request": "创建拉取请求",
+  "Create Merge Request": "创建合并请求",
+  "Pull: Already up to date": "拉取：已是最新",
+  "Fetch: Already up to date": "获取：已是最新",
+  "Push: Everything is up-to-date": "推送：一切都是最新的"
  },
  "zed/crates/git_ui/src/solo_diff_view.rs": {
   "workspace was dropped": "工作区已被丢弃",
@@ -1159,7 +1195,9 @@
   "Unstage All": "取消暂存所有",
   "Show Full File": "显示完整文件",
   "Go to Next Hunk": "跳到下一个变更块",
-  "Show Changes Only": "仅显示更改"
+  "Show Changes Only": "仅显示更改",
+  "Stage and Go to Next Hunk": "暂存并跳到下一个变更块",
+  "Unstage and Go to Next Hunk": "取消暂存并跳到下一个变更块"
  },
  "zed/crates/git_ui/src/staged_diff.rs": {
   "Unstage Hunk": "取消暂存块",
@@ -1167,13 +1205,16 @@
   "Unstage All": "取消暂存所有",
   "Staged Changes": "已暂存的更改",
   "Go to Next Hunk": "跳到下一个变更块",
-  "No staged changes": "没有已暂存的更改"
+  "No staged changes": "没有已暂存的更改",
+  "Unstage and Go to Next Hunk": "取消暂存并跳到下一个变更块"
  },
  "zed/crates/git_ui/src/stash_picker.rs": {
   "View Stash": "查看储藏",
   "Pop Stash": "弹出储藏",
   "Drop Stash": "丢弃储藏",
-  "Failed to pop stash": "弹出贮藏失败"
+  "Failed to pop stash": "弹出贮藏失败",
+  "Failed to drop stash": "删除贮藏失败",
+  "Failed to apply stash": "应用贮藏失败"
  },
  "zed/crates/git_ui/src/unstaged_diff.rs": {
   "Stage Hunk": "暂存块",
@@ -1184,7 +1225,8 @@
   "Restore All Changes": "恢复所有更改",
   "Go to Next Hunk": "跳到下一个变更块",
   "Unstaged Changes": "未暂存的更改",
-  "No unstaged changes": "没有未暂存的更改"
+  "No unstaged changes": "没有未暂存的更改",
+  "Stage and Go to Next Hunk": "暂存并跳到下一个变更块"
  },
  "zed/crates/git_ui_core/src/askpass_modal.rs": {
   "Learn more": "了解更多"
@@ -1685,7 +1727,13 @@
   "Symbolic Link": "符号链接",
   "Add to .gitignore": "添加到 .gitignore",
   "Copy File Permalink": "复制文件永久链接",
-  "Open File Permalink": "打开文件永久链接"
+  "Open File Permalink": "打开文件永久链接",
+  "Compare Marked Files": "比较已标记的文件",
+  "Do you want to trash": "你想移入回收站吗",
+  "This cannot be undone.": "此操作无法撤销。",
+  "Add to .git/info/exclude": "添加到 .git/info/exclude",
+  "File is too large to load": "文件过大，无法加载",
+  "Do you want to replace it?": "你想替换它吗？"
  },
  "zed/crates/prompt_store/src/prompt_store.rs": {
   "prompt not found": "未找到提示词",
@@ -1890,7 +1938,8 @@
   "Match Whole Words": "全字匹配",
   "Also search files ignored by configuration": "也搜索配置忽略的文件",
   "Use Regular Expressions": "使用正则表达式",
-  "No more matches": "没有更多匹配项"
+  "No more matches": "没有更多匹配项",
+  "Match Case Sensitivity": "匹配大小写敏感"
  },
  "zed/crates/search/src/search_status_button.rs": {
   "Project Search": "项目搜索"
@@ -3088,7 +3137,9 @@
   "Terminal Panel": "终端面板",
   "Inline Assist": "内联助手",
   "Terminal": "终端",
-  "Failed to spawn terminal": "无法启动终端"
+  "Failed to spawn terminal": "无法启动终端",
+  "Failed to read workspace": "读取工作区失败",
+  "Failed to retrieve terminal pane": "获取终端窗格失败"
  },
  "zed/crates/terminal_view/src/terminal_view.rs": {
   "New Terminal": "新建终端",
@@ -3195,10 +3246,20 @@
   "Log Out": "退出登录",
   "Server is active.": "服务器处于活动状态。",
   "Server is stopped.": "服务器已停止。",
-  "Server is starting.": "服务器正在启动。"
+  "Server is starting.": "服务器正在启动。",
+  "Server has an error.": "服务器出错。",
+  "Client Secret Required.": "需要客户端密钥。",
+  "Authentication Required.": "需要身份验证。",
+  "Agent with icon (running)": "带图标的智能体（运行中）",
+  "MCP server (starting, animated)": "MCP 服务器（启动中，动画）"
  },
  "zed/crates/ui/src/components/ai/thread_item.rs": {
-  "Waiting for Confirmation": "等待确认"
+  "Waiting for Confirmation": "等待确认",
+  "Full metadata with branch": "带分支的完整元数据",
+  "Hover to see action button": "悬停以查看操作按钮",
+  "Thread with project context": "带项目上下文的线程",
+  "Implement keyboard navigation": "实现键盘导航",
+  "Execute shell command in terminal": "在终端中执行 shell 命令"
  },
  "zed/crates/ui/src/components/banner.rs": {
   "Learn More": "了解更多",
@@ -3215,7 +3276,11 @@
   "Start a new thread from a summary to continue the conversation.": "从摘要开始新会话以继续对话。",
   "Got it": "知道了",
   "Error details:": "错误详情：",
-  "Additional details:": "其他详情："
+  "Additional details:": "其他详情：",
+  "Please retry in 26.33s.": "请在 26.33 秒后重试。",
+  "With Title and Description": "带标题和描述",
+  "Error with Multiple Actions": "含多个操作时的错误",
+  "You exceeded your current quota.": "你已超出当前配额。"
  },
  "zed/crates/ui/src/components/collab/collab_notification.rs": {
   "Project Shared": "项目已共享",
@@ -3224,7 +3289,8 @@
   "the user is sharing a project": "该用户正在共享项目",
   "Contact & Channel Toasts": "联系人与频道提示",
   "Incoming Call": "来电",
-  "Contact Request": "联系人请求"
+  "Contact Request": "联系人请求",
+  "Contact Request Accepted": "联系人请求已接受"
  },
  "zed/crates/ui/src/components/dropdown_menu.rs": {
   "Editor Layout": "编辑器布局",
@@ -3244,7 +3310,9 @@
   "Do you want to leave the current call?": "要离开当前通话吗？",
   "Restricted mode prevents:": "受限模式会阻止：",
   "Stay in Restricted Mode": "留在受限模式",
-  "Trust and Continue": "信任并继续"
+  "Trust and Continue": "信任并继续",
+  "Language servers from running": "阻止语言服务器运行",
+  "MCP integrations from installing": "阻止安装 MCP 集成"
  },
  "zed/crates/ui/src/components/notification/announcement_toast.rs": {
   "Learn More": "了解更多",
@@ -3268,7 +3336,8 @@
  },
  "zed/crates/ui/src/utils.rs": {
   "Reveal in Finder": "在 Finder 中显示",
-  "Reveal in File Manager": "在文件管理器中显示"
+  "Reveal in File Manager": "在文件管理器中显示",
+  "Reveal in File Explorer": "在文件资源管理器中显示"
  },
  "zed/crates/util/src/util.rs": {
   "passwd entry for uid {} not found": "未找到 uid {} 的 passwd 条目",
@@ -3308,7 +3377,13 @@
   "Update Zed": "更新 Zed",
   "With Title": "带标题",
   "Click to Close": "点击关闭",
-  "Click to close": "点击关闭"
+  "Click to close": "点击关闭",
+  "Response already sent": "响应已发送",
+  "Shift-click to Suppress": "Shift 点击以抑制",
+  "Failed to save the file.": "文件保存失败。",
+  "Suppress with shift-click": "Shift 点击以抑制",
+  "Header Actions (top right)": "标题栏操作（右上角）",
+  "With Primary Action (end icon)": "带主操作（末尾图标）"
  },
  "zed/crates/workspace/src/pane.rs": {
   "you have unsaved changes": "您有未保存的更改",
@@ -3369,7 +3444,15 @@
   "Make Tab Read-Only": "将标签设为只读",
   "Copy File Permalink": "复制文件永久链接",
   "New Center Terminal": "新建居中终端",
-  "Open File Permalink": "打开文件永久链接"
+  "Open File Permalink": "打开文件永久链接",
+  "Close Without Saving": "不保存并关闭",
+  "Splits the pane upward.": "向上拆分窗格。",
+  "Splits the pane downward.": "向下拆分窗格。",
+  "Splits the pane vertically.": "垂直拆分窗格。",
+  "Splits the pane to the left.": "向左拆分窗格。",
+  "Splits the pane horizontally.": "水平拆分窗格。",
+  "Splits the pane to the right.": "向右拆分窗格。",
+  "This will make this tab editable": "这会使该标签页可编辑"
  },
  "zed/crates/workspace/src/pane_group.rs": {
   "Follow {} to their active project": "跟随 {} 到他们的活动项目",
@@ -3397,14 +3480,25 @@
   "Saving items": "保存项目",
   "Preparing insertion": "准备插入",
   "Terminal": "终端",
-  "Inserting bookmark": "正在插入书签"
+  "Inserting bookmark": "正在插入书签",
+  "Get remote connection": "获取远程连接",
+  "Clearing old bookmarks": "正在清理旧书签",
+  "Clearing old breakpoints": "正在清理旧断点",
+  "No workspace found for id": "未找到该 ID 对应的工作区",
+  "Clearing old user toolchains": "正在清理旧用户工具链"
  },
  "zed/crates/workspace/src/security_modal.rs": {
   "Open in Restricted": "以受限模式打开",
   "Trust and Continue": "信任并继续",
   "Restricted Mode prevents:": "受限模式会阻止：",
   "Stay in Restricted Mode": "留在受限模式",
-  "Folder to trust": "要信任的文件夹"
+  "Folder to trust": "要信任的文件夹",
+  "Unrecognized Project": "无法识别的项目",
+  "Trust all projects in": "信任以下位置的所有项目",
+  "Trust all single files": "信任所有单个文件",
+  "Home directory not available": "主目录不可用",
+  "Enter an absolute folder path": "输入文件夹的绝对路径",
+  "Language servers from running": "阻止语言服务器运行"
  },
  "zed/crates/workspace/src/status_bar.rs": {
   "Open Threads Sidebar": "打开会话侧栏"
@@ -3460,7 +3554,10 @@
   "Clone Repository": "克隆仓库",
   "Open Agent Panel": "打开智能体面板",
   "Return to Onboarding": "返回引导流程",
-  "Customize Keymaps": "自定义键位映射"
+  "Customize Keymaps": "自定义键位映射",
+  "Welcome back to Zed": "欢迎回到 Zed",
+  "Open Command Palette": "打开命令面板",
+  "No welcome page to deserialize": "没有可反序列化的欢迎页"
  },
  "zed/crates/workspace/src/workspace.rs": {
   "cannot open file {:?}": "不能打开文件 {:?}",
@@ -3503,7 +3600,12 @@
   "Bottom dock": "底部停靠",
   "Discard Edits": "放弃编辑",
   "Failed to save": "保存失败",
-  "Yes, Join Channel": "是，加入频道"
+  "Yes, Join Channel": "是，加入频道",
+  "Close window and hang up": "关闭窗口并挂断",
+  "Please update to continue.": "请更新后继续。",
+  "Please sign in to continue.": "请登录后继续。",
+  "There must be an active pane": "必须有一个活动窗格",
+  "Do you want to switch channels?": "你想切换频道吗？"
  },
  "zed/crates/workspace/src/workspace_error.rs": {
   "See docs": "查看文档"
@@ -3550,7 +3652,8 @@
   "channel is unbounded": "通道是无界的",
   "error reading file {abs_path:?} on event: {err:#}": "在事件中读取文件 {abs_path:?} 出错: {err:#}",
   "update ignore status {:?}": "更新忽略状态 {:?}",
-  "reloading repositories: {dot_git_paths:?}": "重新加载仓库: {dot_git_paths:?}"
+  "reloading repositories: {dot_git_paths:?}": "重新加载仓库: {dot_git_paths:?}",
+  "File is too large to load": "文件过大，无法加载"
  },
  "zed/crates/zed/src/main.rs": {
   "Zed failed to launch": "Zed 启动失败",
@@ -3558,7 +3661,10 @@
   "zed is already running": "zed 已在运行",
   "Settings Changed": "设置已更改",
   "Themes dir path {themes_dir:?} is not a directory": "主题目录 {themes_dir:?} 不是一个目录",
-  "Failed to create themes dir at path {themes_dir:?}": "创建主题目录失败，路径为 {themes_dir:?}"
+  "Failed to create themes dir at path {themes_dir:?}": "创建主题目录失败，路径为 {themes_dir:?}",
+  "Reopen in Dev Container": "在开发容器中重新打开",
+  "Failed to parse JSON Schema": "解析 JSON Schema 失败",
+  "Failed to serialize action schema": "序列化操作 schema 失败"
  },
  "zed/crates/zed/src/visual_test_runner.rs": {
   "Hello, world!": "你好，世界！",
@@ -3608,7 +3714,8 @@
   "View": "视图",
   "Accessibility Tree": "无障碍树",
   "Partial file index": "部分文件索引",
-  "Set up new worktree": "设置新工作树"
+  "Set up new worktree": "设置新工作树",
+  "Default Semantic Token Rules": "默认语义标记规则"
  },
  "zed/crates/zed/src/zed/app_menus.rs": {
   "Zoom In": "放大",
@@ -3716,7 +3823,9 @@
   "Zed Repository": "Zed 仓库",
   "Join the Team": "加入团队",
   "Debugger Panel": "调试面板",
-  "Find in Project": "在项目中查找"
+  "Find in Project": "在项目中查找",
+  "Open Project Settings File": "打开项目设置文件",
+  "Select Previous Occurrence": "选择上一个出现位置"
  },
  "zed/crates/zed/src/zed/mac_only_instance.rs": {
   "Zed Editor Dev Instance Running": "Zed 编辑器开发实例正在运行",
@@ -3776,11 +3885,14 @@
   "Code Lens": "代码镜头",
   "Helix Mode": "Helix 模式",
   "Inline Values": "内联值",
-  "Semantic Highlights": "语义高亮"
+  "Semantic Highlights": "语义高亮",
+  "No Code Actions Available": "没有可用的代码操作",
+  "Diff Against Default Branch": "与默认分支比较"
  },
  "zed/crates/zed/src/zed/quick_action_bar/preview.rs": {
   "Preview Markdown": "预览 Markdown",
-  "Preview SVG": "预览 SVG"
+  "Preview SVG": "预览 SVG",
+  "Preview Tabular Data": "预览表格数据"
  },
  "zed/crates/zed/src/zed/quick_action_bar/repl_menu.rs": {
   "kernel: {} ({})": "内核: {} ({})",
@@ -3802,10 +3914,13 @@
  },
  "zed/crates/zed/src/zed/telemetry_log.rs": {
   "Telemetry Log": "遥测日志",
-  "Filter events...": "筛选事件…"
+  "Filter events...": "筛选事件…",
+  "No telemetry events recorded yet": "暂无遥测事件记录"
  },
  "zed/crates/zed/src/zed/windows_only_instance.rs": {
-  "error parsing path argument: {}": "解析路径参数时出错: {}"
+  "error parsing path argument: {}": "解析路径参数时出错: {}",
+  "Failed to read from named pipe": "从命名管道读取失败",
+  "Unable to create instance mutex.": "无法创建实例互斥锁。"
  },
  "zed/crates/zlog/src/sink.rs": {
   "Hello, world!": "你好，世界！"
@@ -3814,7 +3929,11 @@
   "Not Found": "未找到"
  },
  "zed/crates/ui/src/components/ai/configured_api_card.rs": {
-  "Reset Key": "重置按键"
+  "Reset Key": "重置按键",
+  "API key is configured": "API 密钥已配置",
+  "OpenAI API key configured": "OpenAI API 密钥已配置",
+  "Click to reset your API key": "点击重置你的 API 密钥",
+  "Anthropic API key configured": "Anthropic API 密钥已配置"
  },
  "zed/crates/settings_ui/src/pages/audio_test_window.rs": {
   "Audio Test": "音频测试",
@@ -3884,7 +4003,8 @@
   "Export as JSON": "导出为 JSON",
   "No watch roots.": "没有监视根目录。",
   "Scan Exclusions": "扫描排除项",
-  "Permission denied": "没有权限"
+  "Permission denied": "没有权限",
+  "No local projects are open.": "没有打开的本地项目。"
  },
  "zed/crates/ui/src/components/collab/update_button.rs": {
   "Up to Date": "已是最新",
@@ -3902,7 +4022,8 @@
  },
  "zed/crates/project_panel/src/undo.rs": {
   "Redo Failed": "重做失败",
-  "Undo Failed": "撤销失败"
+  "Undo Failed": "撤销失败",
+  "Failed to obtain workspace.": "获取工作区失败。"
  },
  "zed/crates/ui/src/components/label/highlighted_label.rs": {
   "Single Line": "单行",
@@ -3911,13 +4032,15 @@
   "Small Highlight": "小号高亮",
   "Highlighted Text": "高亮文本",
   "Italic Highlight": "斜体高亮",
-  "Colored Highlight": "彩色高亮"
+  "Colored Highlight": "彩色高亮",
+  "Underlined Highlight": "下划线高亮"
  },
  "zed/crates/ui/src/components/divider.rs": {
   "Border Color": "边框颜色"
  },
  "zed/crates/ui/src/components/button/button_like.rs": {
-  "Button Group": "按钮组"
+  "Button Group": "按钮组",
+  "Button Group Constructors": "按钮组构造器"
  },
  "zed/crates/zed/src/zed/edit_prediction_registry.rs": {
   "Sweep Prompt": "清理提示"
@@ -3943,12 +4066,36 @@
   "Backup and Update": "备份并更新"
  },
  "zed/crates/git_ui/src/clone.rs": {
-  "Add repo to project": "将仓库添加到项目"
+  "Add repo to project": "将仓库添加到项目",
+  "Open repo in new project": "在新项目中打开仓库",
+  "Select as Repository Destination": "选择为仓库目标位置"
  },
  "zed/crates/ui/src/components/icon.rs": {
   "Forgejo Self-Hosted": "自建 Forgejo"
  },
  "zed/crates/git_ui/src/git_picker.rs": {
-  "Toggle Stash Picker": "切换贮藏选择器"
+  "Toggle Stash Picker": "切换贮藏选择器",
+  "Toggle Branch Picker": "切换分支选择器"
+ },
+ "zed/crates/git_ui/src/repository_selector.rs": {
+  "Select a repository...": "选择仓库…"
+ },
+ "zed/crates/zed/src/reliability.rs": {
+  "Failed to read minidump": "读取 minidump 失败",
+  "Minidump endpoint not set": "未设置 minidump 端点",
+  "The GPU Zed is running on": "Zed 正在使用的显卡"
+ },
+ "zed/crates/ui/src/components/toggle.rs": {
+  "Tooltip with Description": "带描述的工具提示"
+ },
+ "zed/crates/ui/src/components/chip.rs": {
+  "Customized Background Color": "自定义背景色"
+ },
+ "zed/crates/zed/src/reliability/hang_detection.rs": {
+  "App can always spawn threads": "应用始终可以创建线程"
+ },
+ "zed/crates/workspace/src/multi_workspace.rs": {
+  "Window is not a MultiWorkspace": "窗口不是 MultiWorkspace",
+  "Remote connection was cancelled": "远程连接已取消"
  }
 }
