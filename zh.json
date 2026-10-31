@@ -23,7 +23,23 @@
   "Receipt retention observer was dropped": "回执保留观察者已释放",
   "Unknown content type is not supported.": "不支持未知的内容类型。",
   "Session does not report foreground state": "会话未上报前台状态",
-  "Permission request has no offered options": "权限请求没有可选选项"
+  "Permission request has no offered options": "权限请求没有可选选项",
+  "Permission choice is not an offered option": "权限选项不是可选供给项",
+  "Tool call entry disappeared while updating": "更新时工具调用条目已消失",
+  "Permission request has duplicate option IDs": "权限请求存在重复的选项 ID",
+  "Invalid source cursor for streaming agent text": "流式智能体文本的源光标无效",
+  "Permission request belongs to a different session": "权限请求属于其他会话",
+  "Submission ended before its response was delivered": "提交在响应送达前结束",
+  "Tool call entry disappeared while updating content": "更新内容时工具调用条目已消失",
+  "This subagent's parent does not allow cancelling it": "此子智能体的父级不允许取消它",
+  "Agent connection lost before cancellation was confirmed": "在确认取消前智能体连接已丢失",
+  "Permission request closed before the outcome was delivered": "权限请求在结果送达前关闭",
+  "Receipt transport ended before application acknowledgement": "回执传输在应用确认前结束",
+  "The agent owns this session, so it does not accept prompts": "此会话归智能体所有，因此不接受提示",
+  "Elicitation waiter closed before cancellation was delivered": "征询等待者在取消送达前关闭",
+  "Elicitation waiter closed before its response was delivered": "征询等待者在其响应送达前关闭",
+  "Cannot authorize a tool with an unknown permission option kind": "无法授权权限选项类型未知的工具",
+  "Client-managed tool content cannot reference an agent-owned display terminal": "客户端管理的工具内容不能引用智能体所有的显示终端"
  },
  "zed/crates/acp_thread/src/auth_methods.rs": {
   "Sign in": "登录"
@@ -73,7 +89,12 @@
   "The subagent stopped without a reason": "子智能体无原因停止",
   "Native completion observer was dropped": "原生补全观察者已释放",
   "Previous native execution was released": "之前的原生执行已释放",
-  "No pending native submissions to cancel": "没有可取消的待处理原生提交"
+  "No pending native submissions to cancel": "没有可取消的待处理原生提交",
+  "Cannot load a skill from a restricted worktree": "无法从受限工作树加载技能",
+  "The agent reached the maximum number of tokens.": "智能体已达到最大 Token 数。",
+  "Native subagent returned an unsupported stop reason": "原生子智能体返回了不支持的停止原因",
+  "Summarize the conversation so far to free up context": "摘要此前的对话以释放上下文",
+  "The agent refused to process that prompt. Try again.": "智能体拒绝处理该提示。请重试。"
  },
  "zed/crates/agent/src/legacy_thread.rs": {
   "Hello, world!": "你好，世界！"
@@ -83,7 +104,10 @@
   "Only one": "仅一个",
   "Your answer": "你的回答",
   "Or type your own answer": "或输入你自己的回答",
-  "The user declined to answer the question.": "用户拒绝回答该问题。"
+  "The user declined to answer the question.": "用户拒绝回答该问题。",
+  "The question was dismissed without an answer.": "问题被关闭且未作答。",
+  "The user cancelled the question without answering.": "用户取消了问题且未作答。",
+  "The user submitted the form without providing an answer.": "用户提交了表单但未给出回答。"
  },
  "zed/crates/agent/src/tools/edit_session/streaming_fuzzy_matcher.rs": {
   "This is a test": "这是一个测试"
@@ -127,7 +151,13 @@
   "Context server stopped running": "上下文服务器已停止运行",
   "Context server store was dropped": "上下文服务器存储已释放",
   "Failed to resolve context server": "解析上下文服务器失败",
-  "Expected exactly one key-value pair": "应恰好有一个键值对"
+  "Expected exactly one key-value pair": "应恰好有一个键值对",
+  "Failed to resolve context server configuration": "解析上下文服务器配置失败",
+  "Expected exactly one context server configuration": "应恰好有一个上下文服务器配置",
+  "Enter client secret (leave empty for public clients)": "输入客户端密钥（公开客户端留空）",
+  "Failed to load JSON schema for context server settings": "加载上下文服务器设置的 JSON schema 失败",
+  "Enter your OAuth client secret, or leave empty for public clients": "输入你的 OAuth 客户端密钥，公开客户端可留空",
+  "Check the server docs for required arguments and environment variables.": "查看服务器文档以了解必需的参数和环境变量。"
  },
  "zed/crates/agent_ui/src/agent_configuration/manage_profiles_modal.rs": {
   "Go Back": "返回",
@@ -171,7 +201,11 @@
   "Thread metadata store not available": "线程元数据存储不可用",
   "Source workspace is no longer available": "源工作区已不可用",
   "Title generation failed. Click to retry.": "标题生成失败。点击重试。",
-  "Failed to parse thread data from clipboard": "从剪贴板解析线程数据失败"
+  "Failed to parse thread data from clipboard": "从剪贴板解析线程数据失败",
+  "Thread copied to clipboard (base64 encoded)": "线程已复制到剪贴板（base64 编码）",
+  "Please resolve the following merge conflict in": "请解决以下位置的合并冲突：",
+  "Failed to decode clipboard content (expected base64)": "解码剪贴板内容失败（应为 base64）",
+  "No model is configured for summarizing thread titles.": "未配置用于摘要线程标题的模型。"
  },
  "zed/crates/agent_ui/src/agent_registry_ui.rs": {
   "Not Installed": "未安装",
@@ -188,7 +222,8 @@
   "Not supported on this platform": "此平台不支持",
   "No installed agents match your search.": "没有匹配搜索的已安装智能体。",
   "View Agent License or Terms of Service": "查看智能体许可证或服务条款",
-  "No uninstalled agents match your search.": "没有匹配搜索的未安装智能体。"
+  "No uninstalled agents match your search.": "没有匹配搜索的未安装智能体。",
+  "Failed to load the agent registry. Please check your connection and try again.": "加载智能体注册表失败。请检查连接后重试。"
  },
  "zed/crates/agent_ui/src/agent_ui.rs": {
   "Add Context": "添加上下文",
@@ -198,7 +233,8 @@
  "zed/crates/agent_ui/src/buffer_codegen.rs": {
   "invalid transformation range": "无效转换范围",
   "failed to strip invalid spans, chunk size: {}": "无法去除无效跨度，块大小：{}",
-  "EOF while parsing a string": "解析字符串时遇到 EOF"
+  "EOF while parsing a string": "解析字符串时遇到 EOF",
+  "Replaces text in <rewrite_this></rewrite_this> tags with your replacement_text.": "用 replacement_text 替换 <rewrite_this></rewrite_this> 标签内的文本。"
  },
  "zed/crates/agent_ui/src/config_options.rs": {
   "Change Model": "更改模型",
@@ -253,7 +289,17 @@
   "Agent stopped because of an error": "智能体因错误停止",
   "This state should never be reached": "不应到达此状态",
   "Agent stopped at the output token limit": "智能体在输出 Token 上限处停止",
-  "Agent refused to respond to this request": "智能体拒绝响应此请求"
+  "Agent refused to respond to this request": "智能体拒绝响应此请求",
+  "Login command terminated without exit status": "登录命令结束但没有退出状态",
+  "Choose one of the following authentication options:": "选择以下认证方式之一：",
+  "Discard local copies only; does not cancel agent work": "仅丢弃本地副本；不会取消智能体工作",
+  "Subagent parent was released while its session loaded": "子智能体会话加载时其父级已释放",
+  "The optional documentation integration is unavailable": "可选的文档集成不可用",
+  "Copy the original content and receipt evidence as JSON": "以 JSON 复制原始内容和回执证据",
+  "External agents are not yet supported in shared projects.": "共享项目暂不支持外部智能体。",
+  "Loading or resuming sessions is not supported by this agent.": "此智能体不支持加载或恢复会话。",
+  "Agent connection lost. Reconnect to restore the conversation.": "智能体连接丢失。重新连接以恢复对话。",
+  "Reconnecting requires full history replay. Saved input has been kept.": "重新连接需要重放完整历史。已保留保存的输入。"
  },
  "zed/crates/agent_ui/src/conversation_view/thread_view.rs": {
   "Add Context": "添加上下文",
@@ -365,7 +411,30 @@
   "Configure unicode confusables warning": "配置 Unicode 易混淆字符警告",
   "All paths except protected Git metadata": "除受保护的 Git 元数据外的所有路径",
   "Model reached its maximum output length.": "模型已达到最大输出长度。",
-  "Open the settings to configure providers": "打开设置以配置服务商"
+  "Open the settings to configure providers": "打开设置以配置服务商",
+  "Editing will restart the thread from this point.": "编辑将从此处重新开始线程。",
+  "Context too large for the model's context window.": "上下文超出模型的上下文窗口。",
+  "This command can write to a file on a Windows drive": "此命令可以写入 Windows 盘符上的文件",
+  "Open the settings to configure the selected provider": "打开设置以配置所选服务商",
+  "Track the agent's location as it reads and edits files.": "跟踪智能体读写文件时的位置。",
+  "What went wrong? Share your feedback so we can improve.": "哪里出了问题？分享你的反馈以帮助我们改进。",
+  "The agent accepted this message but hasn't shown it yet.": "智能体已接受此消息，但尚未显示。",
+  "Select a model from the model picker below to get started.": "从下方的模型选择器中选择模型以开始。",
+  "This agent doesn't currently support multi-root workspaces": "此智能体目前不支持多根工作区",
+  "You may need to reconfigure authentication for this provider": "你可能需要为此服务商重新配置认证",
+  "Unsandboxed execution is allowed for the rest of this thread.": "此线程其余部分允许无沙箱执行。",
+  "The agent accepted this message, then the connection was lost.": "智能体接受了此消息，随后连接丢失。",
+  "The connection was lost before the agent confirmed this message.": "智能体确认此消息前连接已丢失。",
+  "Choose a different model or configure other providers to get started": "选择其他模型或配置其他服务商以开始",
+  "For best performance, run Codex in Windows Subsystem for Linux (WSL2)": "为获得最佳性能，请在适用于 Linux 的 Windows 子系统（WSL2）中运行 Codex",
+  "We appreciate your feedback and will use it to improve in the future.": "感谢你的反馈，我们将用它来改进。",
+  "This queued message contains unsupported content and cannot be edited.": "此排队消息包含不支持的内容，无法编辑。",
+  "To continue, run /compact or start a new thread and @-mention this one": "要继续，请运行 /compact，或新建线程并 @ 提及此线程",
+  "You reached your free usage limit. Upgrade to Zed Pro for more prompts.": "你已达到免费使用上限。升级到 Zed Pro 以获取更多提示。",
+  "Rating the thread sends all of your current conversation to the Zed team.": "评价线程会将你当前的全部对话发送给 Zed 团队。",
+  "This message contains unsupported content and cannot be edited or resent.": "此消息包含不支持的内容，无法编辑或重新发送。",
+  "Copy into an empty composer. The saved submission is kept until discarded.": "粘贴到空的输入框。已保存的提交内容会保留到丢弃为止。",
+  "Discard the unsupported draft before moving a queued message into the composer.": "在把排队消息移入输入框前，先丢弃不支持的草稿。"
  },
  "zed/crates/agent_ui/src/diagnostics.rs": {
   "diagnostics: {}": "诊断：{}",
@@ -411,7 +480,9 @@
   "Failed to convert image": "图片转换失败",
   "No changes found in branch diff.": "分支差异中未发现更改。",
   "This model does not support images yet": "此模型暂不支持图片",
-  "Unsupported mention URI type for paste": "粘贴时不支持的提及 URI 类型"
+  "Unsupported mention URI type for paste": "粘贴时不支持的提及 URI 类型",
+  "Thread mentions are only supported for the native agent": "仅原生智能体支持线程提及",
+  "Untitled buffer selection mentions are not supported for paste": "粘贴不支持未命名缓冲区选区提及"
  },
  "zed/crates/agent_ui/src/message_editor.rs": {
   "not supported": "不支持",
@@ -431,7 +502,8 @@
   "Get help to write anything.": "获取帮助来撰写任何内容。",
   "No profiles match your search.": "没有匹配搜索的配置。",
   "Chat about anything with no tools.": "不使用工具，聊什么都行。",
-  "This model does not support tools.": "此模型不支持工具。"
+  "This model does not support tools.": "此模型不支持工具。",
+  "Some tools are disabled. Click to review trust settings.": "部分工具已禁用。点击查看信任设置。"
  },
  "zed/crates/agent_ui/src/terminal_inline_assistant.rs": {
   "invalid assist": "无效助手",
@@ -459,7 +531,8 @@
  "zed/crates/agent_ui/src/ui/end_trial_upsell.rs": {
   "Upgrade to Zed Pro": "升级到 Zed Pro",
   "Banner Dismissed": "横幅已关闭",
-  "Your Zed Pro Trial has expired": "你的 Zed Pro 试用已到期"
+  "Your Zed Pro Trial has expired": "你的 Zed Pro 试用已到期",
+  "You've been automatically reset to the Free plan.": "你已被自动切换回免费套餐。"
  },
  "zed/crates/agent_ui/src/ui/mention_crease.rs": {
   "View docs": "查看文档",
@@ -1730,10 +1803,12 @@
   "Plain Text": "纯文本"
  },
  "zed/crates/language_model/src/language_model.rs": {
-  "API Key": "API 密钥"
+  "API Key": "API 密钥",
+  "Stream ended without receiving a complete tool use": "流已结束但未收到完整的工具调用"
  },
  "zed/crates/language_model/src/registry.rs": {
-  "Configure at least one LLM provider to start using the panel.": "配置至少一个 LLM 提供商以开始使用面板。"
+  "Configure at least one LLM provider to start using the panel.": "配置至少一个 LLM 提供商以开始使用面板。",
+  "LLM provider is not configured or does not support the configured model.": "未配置大模型服务商，或它不支持所配置的模型。"
  },
  "zed/crates/language_model_core/src/language_model_core.rs": {
   "credentials not found": "未找到凭证",
@@ -3430,7 +3505,8 @@
   "Start New Agent Thread": "开始新的智能体线程",
   "Open Thread as Markdown": "以 Markdown 打开线程",
   "No threads match your search.": "没有匹配搜索的线程。",
-  "Request Stop (Activity Unconfirmed)": "请求停止（活动状态未确认）"
+  "Request Stop (Activity Unconfirmed)": "请求停止（活动状态未确认）",
+  "No model is configured for summarizing thread titles.": "未配置用于摘要线程标题的模型。"
  },
  "zed/crates/sidebar/src/sidebar_tests.rs": {
   "New Thread": "新话题",
@@ -4697,7 +4773,11 @@
   "Can't edit file: path is a directory": "无法编辑文件：路径是目录",
   "Can't write to file: path is a directory": "无法写入文件：路径是目录",
   "Cannot finalize edits on a write session": "无法在写入会话中完成编辑",
-  "Cannot finalize a write on an edit session": "无法在编辑会话中完成写入"
+  "Cannot finalize a write on an edit session": "无法在编辑会话中完成写入",
+  "Can't create file: parent is not a directory": "无法创建文件：父级不是目录",
+  "Cannot apply partial edits on a write session": "无法在写入会话中应用部分编辑",
+  "Cannot apply partial content on an edit session": "无法在编辑会话中应用部分内容",
+  "Can't create file: parent directory doesn't exist": "无法创建文件：父目录不存在"
  },
  "zed/crates/agent_ui/src/conversation_view/thread_search_bar.rs": {
   "Next Match": "下一个匹配",
@@ -4716,7 +4796,8 @@
   "No new threads found to import.": "未找到可导入的新线程。",
   "Imported 1 thread from other channels.": "已从其他频道导入 1 个线程。",
   "Could not find workspace to import from.": "未找到可从中导入的工作区。",
-  "Did not find any workspaces to import from": "未找到任何可从中导入的工作区"
+  "Did not find any workspaces to import from": "未找到任何可从中导入的工作区",
+  "Did not find any workspaces to import from.": "未找到任何可从中导入的工作区。"
  },
  "zed/crates/agent_ui/src/conversation_view/elicitation.rs": {
   "Open Again": "再次打开",
@@ -4728,7 +4809,18 @@
   "Waiting for completion": "等待完成",
   "Account name is required": "账户名为必填项",
   "Read and update repositories": "读取并更新仓库",
-  "Choose at least one access scope": "至少选择一个访问范围"
+  "Choose at least one access scope": "至少选择一个访问范围",
+  "Validate changes against staging data first.": "先对照暂存数据验证更改。",
+  "Store this authorization for future sessions.": "为此后的会话记住此授权。",
+  "Choose how Zed should connect to this account.": "选择 Zed 连接此账户的方式。",
+  "Use the live account and production resources.": "使用实时账户和生产资源。",
+  "Read account identity and basic profile details.": "读取账户身份和基本资料。",
+  "Used to label this connection in the agent panel.": "用于在智能体面板中标识此连接。",
+  "Authorize Zed in your browser to finish signing in.": "在浏览器中授权 Zed 以完成登录。",
+  "Choose what the agent can use for this authorization.": "选择此授权允许智能体使用的内容。",
+  "Select the environment this credential should target.": "选择此凭据要作用的环境。",
+  "Read and update repositories connected to this account.": "读取并更新连接到此账户的仓库。",
+  "ACP elicitation request cards as rendered in the agent panel.": "智能体面板中渲染的 ACP 征询请求卡片。"
  },
  "zed/crates/agent_ui/src/thread_worktree_archive.rs": {
   "WIP staged": "暂存中的进行中改动",
@@ -4752,14 +4844,21 @@
   "ACP response callback was dropped": "ACP 响应回调已释放",
   "Working directory cannot be empty": "工作目录不能为空",
   "Logout is not supported by this agent.": "此智能体不支持退出登录。",
-  "Failed to receive ACP connection handle": "接收 ACP 连接句柄失败"
+  "Failed to receive ACP connection handle": "接收 ACP 连接句柄失败",
+  "Login with your Google or Vertex AI account": "使用你的 Google 或 Vertex AI 账户登录",
+  "ACP new-session response callback was cancelled": "ACP 新建会话响应回调已取消",
+  "Loading sessions is not supported by this agent.": "此智能体不支持加载会话。",
+  "Resuming sessions is not supported by this agent.": "此智能体不支持恢复会话。",
+  "ACP new-session ordering callback ended before registration": "ACP 新会话排序回调在注册前结束",
+  "Authentication method is not supported for agent-managed login": "智能体管理登录不支持此认证方式"
  },
  "zed/crates/agent_ui/src/completion_provider.rs": {
   "Branch Diff": "分支差异",
   "Negative Feedback": "负面反馈",
   "Positive Feedback": "正面反馈",
   "Files & Directories": "文件与目录",
-  "MCP Server Commands": "MCP 服务器命令"
+  "MCP Server Commands": "MCP 服务器命令",
+  "Rate this response as helpful. Sends the current conversation to the Zed team.": "评价此回答有帮助。会将当前对话发送给 Zed 团队。"
  },
  "zed/crates/agent_ui/src/mode_selector.rs": {
   "Change Mode": "切换模式",
@@ -4792,7 +4891,18 @@
   "Permission to run tool denied by user": "运行工具的权限被用户拒绝",
   "Run without sandbox for this subagent": "仅此子智能体无沙箱运行",
   "Compaction cancelled after summarizing": "压缩在摘要生成后取消",
-  "Compaction cancelled while summarizing": "压缩在生成摘要时取消"
+  "Compaction cancelled while summarizing": "压缩在生成摘要时取消",
+  "Turn cancelled during retry delay, exiting": "轮次在重试延迟期间取消，正在退出",
+  "Compaction cancelled before request started": "压缩在请求开始前取消",
+  "Request refused with no fallback model available": "请求被拒绝，且没有可用的备用模型",
+  "Fetches a URL and returns the content as Markdown.": "获取 URL 并以 Markdown 返回内容。",
+  "Model refused request; checking for fallback model": "模型拒绝了请求；正在查找备用模型",
+  "Dropping partial tool inputs because the stream ended": "流已结束，丢弃不完整的工具输入",
+  "Native agent does not support this content block variant": "原生智能体不支持此内容块变体",
+  "Steering message queued, ending turn at message boundary": "引导消息已排队，将在消息边界结束轮次",
+  "Attempted to read an image, but this model doesn't support it.": "尝试读取图片，但此模型不支持。",
+  "Cannot persist \\\"allow always\\\" sandbox permission: no filesystem available": "无法保存“始终允许”沙箱权限：没有可用的文件系统",
+  "Cannot persist \\\"allow always\\\" unsandboxed permission: no filesystem available": "无法保存“始终允许”无沙箱权限：没有可用的文件系统"
  },
  "zed/crates/agent/src/tools/terminal_tool.rs": {
   "Allow always": "始终允许",
@@ -4803,7 +4913,12 @@
   "Do not pipe output to `tail`": "不要把输出管道到 `tail`",
   "Failed to parse: /proc/1/stat": "解析失败：/proc/1/stat",
   "Command executed successfully.": "命令执行成功。",
-  "Sandboxing is disabled for this thread": "此线程已禁用沙箱"
+  "Sandboxing is disabled for this thread": "此线程已禁用沙箱",
+  "Do not pipe output to `head`, `tail`, or similar": "不要把输出管道到 `head`、`tail` 等",
+  "Unrestricted network access is enabled for this thread": "此线程已启用不受限的网络访问",
+  "Could not select a Linux Zed release for WSL sandboxing": "无法为 WSL 沙箱选择 Linux 版 Zed",
+  "Command terminated unexpectedly. No output was captured.": "命令意外终止。未捕获到输出。",
+  "Unrestricted filesystem writes are enabled for this thread": "此线程已启用不受限的文件系统写入"
  },
  "zed/crates/settings_content/src/agent.rs": {
   "Allow always": "始终允许"
@@ -4827,7 +4942,8 @@
  "zed/crates/agent/src/tools/write_file_tool.rs": {
   "Writing file": "正在写入文件",
   "Write cancelled by user": "写入被用户取消",
-  "Can't write to file: path is a directory": "无法写入文件：路径是目录"
+  "Can't write to file: path is a directory": "无法写入文件：路径是目录",
+  "Can't create file: parent directory doesn't exist": "无法创建文件：父目录不存在"
  },
  "zed/crates/agent/src/tools/create_thread_tool.rs": {
   "Create thread": "创建线程",
@@ -4837,7 +4953,8 @@
  "zed/crates/agent_ui/src/conversation_view/subagent_card.rs": {
   "User canceled": "用户已取消",
   "The subagent reached its token limit.": "子智能体已达到 Token 上限。",
-  "The subagent's model refused to continue.": "子智能体的模型拒绝继续。"
+  "The subagent's model refused to continue.": "子智能体的模型拒绝继续。",
+  "The subagent reached its limit of model requests.": "子智能体已达到模型请求上限。"
  },
  "zed/crates/agent_ui/src/ui/session_notice.rs": {
   "Session Notice": "会话通知",
@@ -4849,7 +4966,12 @@
   "Network performance is degraded": "网络性能下降",
   "Using the workspace configuration": "使用工作区配置",
   "Connected to the remote environment": "已连接到远程环境",
-  "Responses may take longer than usual.": "响应可能比平时更久。"
+  "Responses may take longer than usual.": "响应可能比平时更久。",
+  "Work will continue without this integration.": "将在没有此集成的情况下继续。",
+  "Continuing without it. Other integrations are still available.": "不启用它继续。其他集成仍可用。",
+  "Continuing without it. Repeated notices are shown as separate events.": "不启用它继续。重复通知会作为单独事件显示。",
+  "Agent-specific and future severities use the same generic presentation.": "智能体特定的和未来的严重级别使用相同的通用呈现。",
+  "The optional documentation integration is unavailable in this remote environment": "可选的文档集成在此远程环境中不可用"
  },
  "zed/crates/agent/src/tools/find_references_tool.rs": {
   "Find references": "查找引用"
@@ -4874,7 +4996,8 @@
  },
  "zed/crates/agent/src/tools/apply_code_action_tool.rs": {
   "Apply code action": "应用代码操作",
-  "Index must be 1 or greater.": "索引必须大于等于 1。"
+  "Index must be 1 or greater.": "索引必须大于等于 1。",
+  "No code actions available. Call get_code_actions first.": "没有可用的代码操作。请先调用 get_code_actions。"
  },
  "zed/crates/acp_thread/src/mention.rs": {
   "Missing rule name": "缺少规则名称",
@@ -4887,7 +5010,8 @@
   "Missing path for directory": "目录缺少路径",
   "Missing path for selection": "选区缺少路径",
   "Line numbers should be 1-based": "行号应从 1 开始",
-  "Missing fragment for selection": "选区缺少片段"
+  "Missing fragment for selection": "选区缺少片段",
+  "Missing fragment for untitled buffer selection": "未命名缓冲区选区缺少片段"
  },
  "zed/crates/acp_thread/src/connection.rs": {
   "Session not found": "未找到会话",
@@ -4897,13 +5021,17 @@
   "Closing sessions is not supported": "不支持关闭会话",
   "Loading sessions is not supported": "不支持加载会话",
   "Resuming sessions is not supported": "不支持恢复会话",
-  "Receipt-driven retry is not supported": "不支持基于回执的重试"
+  "Receipt-driven retry is not supported": "不支持基于回执的重试",
+  "Ignoring invalid session information timestamp": "忽略无效的会话信息时间戳",
+  "This agent does not support completion-based prompts": "此智能体不支持基于补全的提示"
  },
  "zed/crates/agent_ui/src/ui/terminal_tool_header.rs": {
   "Stop This Command": "停止此命令",
   "Output was truncated": "输出已被截断",
   "Terminal Tool Header": "终端工具标题",
-  "Long path (truncated from the start)": "长路径（从开头截断）"
+  "Long path (truncated from the start)": "长路径（从开头截断）",
+  "The top of a terminal tool call card in the agent panel.": "智能体面板中终端工具调用卡片的顶部。",
+  "Unsandboxed execution is allowed for the rest of this thread.": "此线程其余部分允许无沙箱执行。"
  },
  "zed/crates/agent/src/tools/evals/terminal_tool.rs": {
   "Provider not found": "未找到服务商"
@@ -4933,7 +5061,20 @@
   "ACP startup drain observer was released": "ACP 启动排空观察者已释放",
   "Additional directories must be absolute": "附加目录必须是绝对路径",
   "Agent connection shut down during startup": "智能体连接在启动过程中关闭",
-  "Failed to receive ACP v2 connection handle": "接收 ACP v2 连接句柄失败"
+  "Failed to receive ACP v2 connection handle": "接收 ACP v2 连接句柄失败",
+  "Session was released before initialization": "会话在初始化前已释放",
+  "Prompt content is not supported by this agent": "此智能体不支持该提示内容",
+  "This agent does not advertise session support": "此智能体未声明支持会话",
+  "Session is already open with a different context": "会话已用不同上下文打开",
+  "New session was released before applying defaults": "新会话在应用默认值前已释放",
+  "ACP subagent sessions are closed with their parent": "ACP 子智能体会话随其父会话关闭",
+  "ACP subagent sessions are loaded with their parent": "ACP 子智能体会话随其父会话加载",
+  "Session was released before initialization completed": "会话在初始化完成前已释放",
+  "Cannot replay history into an already resumed session": "无法将历史重放到已恢复的会话中",
+  "Config option or value is not offered by this session": "此会话未提供该配置选项或值",
+  "Agent returned a session ID that is already registered": "智能体返回了已注册的会话 ID",
+  "ACP response ordering callback ended before application": "ACP 响应排序回调在应用前结束",
+  "Authentication method is not supported for agent-managed login": "智能体管理登录不支持此认证方式"
  },
  "zed/crates/agent/src/db.rs": {
   "Failed to serialize": "序列化失败",
@@ -4949,7 +5090,19 @@
   "Failed to size ACP session update": "估算 ACP 会话更新大小失败",
   "Subagent configuration is read-only": "子智能体配置为只读",
   "ACP foreground dispatch queue closed": "ACP 前台调度队列已关闭",
-  "Terminal notification was not decoded": "终端通知未能解码"
+  "Terminal notification was not decoded": "终端通知未能解码",
+  "Received ACP v2 update for a released session": "收到已释放会话的 ACP v2 更新",
+  "Timed out draining ACP output after agent exit": "智能体退出后排空 ACP 输出超时",
+  "Subagent update belongs to a different ACP session": "子智能体更新属于其他 ACP 会话",
+  "Session was released before its subagent was announced": "会话在子智能体宣告前已释放",
+  "ACP foreground barrier was cancelled before acknowledgment": "ACP 前台屏障在确认前取消",
+  "ACP foreground dispatch queue closed before acknowledgment": "ACP 前台调度队列在确认前关闭",
+  "Elicitation parent request is not owned by an active caller": "征询父请求不属于活动调用方",
+  "ACP foreground dispatch queue closed before disconnect cleanup": "ACP 前台调度队列在断开清理前关闭",
+  "Session was released or replaced before applying configuration": "会话在应用配置前已释放或被替换",
+  "ACP disconnect cleanup waiter was cancelled before acknowledgment": "ACP 断开清理等待者在确认前取消",
+  "ACP foreground dispatch queue closed while handling inbound request": "处理入站请求时 ACP 前台调度队列关闭",
+  "ACP foreground dispatch queue closed while handling inbound notification": "处理入站通知时 ACP 前台调度队列关闭"
  },
  "zed/crates/agent_servers/src/acp/transport.rs": {
   "Failed to take stdin": "获取 stdin 失败",
@@ -4986,7 +5139,9 @@
   "Context server not found": "未找到上下文服务器",
   "MCP tool cancelled by user": "MCP 工具被用户取消",
   "Context server not initialized": "上下文服务器未初始化",
-  "Ignoring audio content from tool response": "忽略工具响应中的音频内容"
+  "Ignoring audio content from tool response": "忽略工具响应中的音频内容",
+  "Ignoring resource content from tool response": "忽略工具响应中的资源内容",
+  "Ignoring resource link content from tool response": "忽略工具响应中的资源链接内容"
  },
  "zed/crates/project/src/context_server_store.rs": {
   "Context server not found": "未找到上下文服务器"
@@ -5003,7 +5158,9 @@
  "zed/crates/agent/src/tools/diagnostics_tool.rs": {
   "Check project diagnostics": "检查项目诊断",
   "Diagnostics cancelled by user": "诊断被用户取消",
-  "Diagnostics successfully refreshed.": "诊断已成功刷新。"
+  "Diagnostics successfully refreshed.": "诊断已成功刷新。",
+  "Failed to pull workspace diagnostics, using cached": "拉取工作区诊断失败，使用缓存",
+  "Failed to refresh diagnostics. Diagnostics may be stale.": "刷新诊断失败。诊断信息可能已过时。"
  },
  "zed/crates/acp_thread/src/diff.rs": {
   "Unsupported file operation": "不支持的文件操作"
@@ -5014,7 +5171,8 @@
  },
  "zed/crates/agent/src/native_agent_server.rs": {
   "Creating native agent entity": "正在创建原生智能体实体",
-  "Creating templates for native agent": "正在为原生智能体创建模板"
+  "Creating templates for native agent": "正在为原生智能体创建模板",
+  "NativeAgentServer connection established successfully": "NativeAgentServer 连接建立成功"
  },
  "zed/crates/eval_cli/src/main.rs": {
   "Agent stopped because of an error": "智能体因错误停止"
@@ -5023,21 +5181,44 @@
   "Agent connection owner was released": "智能体连接所有者已释放"
  },
  "zed/crates/acp_thread/src/terminal.rs": {
-  "Cannot patch a client-owned terminal": "无法修改客户端所有的终端"
+  "Cannot patch a client-owned terminal": "无法修改客户端所有的终端",
+  "Agent-provided terminals have no client-owned process to wait for": "智能体提供的终端没有客户端所有的进程可等待"
  },
  "zed/crates/agent_servers/src/acp/session_updates.rs": {
-  "Session creation is no longer pending": "会话创建不再处于等待状态"
+  "Session creation is no longer pending": "会话创建不再处于等待状态",
+  "Subagent updates must be applied by the ACP connection": "子智能体更新必须由 ACP 连接应用",
+  "Session notification belongs to a different ACP session": "会话通知属于其他 ACP 会话",
+  "ACP pre-response session update staging exceeded its limits": "ACP 预响应会话更新暂存超出限制"
  },
  "zed/crates/agent_servers/src/acp/terminal_updates.rs": {
-  "Malformed ACP v2 terminal notification": "格式错误的 ACP v2 终端通知"
+  "Malformed ACP v2 terminal notification": "格式错误的 ACP v2 终端通知",
+  "Terminal notification belongs to a different ACP session": "终端通知属于其他 ACP 会话",
+  "Ignoring ACP v2 terminal output snapshot with invalid base64": "忽略 base64 无效的 ACP v2 终端输出快照"
  },
  "zed/crates/acp_thread/src/submission.rs": {
-  "Submission cancelled before acceptance": "提交在接受前被取消"
+  "Submission cancelled before acceptance": "提交在接受前被取消",
+  "Foreground cancellation observer was dropped": "前台取消观察者已释放",
+  "Submission already finished before disconnect notification": "提交在断开通知前已完成",
+  "Agent connection lost before submission acceptance was confirmed": "提交确认前智能体连接已丢失",
+  "Session closed or agent connection lost before cancellation was confirmed": "会话已关闭或智能体连接丢失，取消未获确认"
  },
  "zed/crates/agent_ui/src/terminal_thread_metadata_store.rs": {
   "Failed to fetch terminal thread metadata": "获取终端线程元数据失败"
  },
  "zed/crates/agent/src/templates.rs": {
-  "Protected Git metadata remains read-only": "受保护的 Git 元数据保持只读"
+  "Protected Git metadata remains read-only": "受保护的 Git 元数据保持只读",
+  "The user has specified the following rules": "用户指定了以下规则"
+ },
+ "zed/crates/acp_thread/src/config_options.rs": {
+  "This configuration value is not supported by ACP v1": "ACP v1 不支持此配置值"
+ },
+ "zed/crates/acp_thread/src/content.rs": {
+  "This prompt contains content not supported by ACP v1": "此提示包含 ACP v1 不支持的内容"
+ },
+ "zed/crates/agent/src/tools/tool_permissions.rs": {
+  "This file has unsaved changes and the agent wants to overwrite it.": "此文件有未保存的更改，智能体想覆盖它。"
+ },
+ "zed/crates/agent_ui/src/context_server_configuration.rs": {
+  "No extension events global found. Skipping context server configuration wizard": "未找到全局扩展事件。跳过上下文服务器配置向导"
  }
 }
