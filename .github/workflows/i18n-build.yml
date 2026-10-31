@@ -2,7 +2,7 @@ name: Zed 汉化每日构建
 
 on:
   schedule:
-    - cron: '0 15 * * *'
+    - cron: '0 19 * * *'
   workflow_dispatch:
     inputs:
       ref:
