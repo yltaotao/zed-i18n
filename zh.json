@@ -669,8 +669,8 @@
   "project was dropped": "项目已删除",
   "Failed to blame \\\"file.txt\\\": failed to get blame for \\\"file.txt\\\"": "追溯“file.txt”失败: 获取“file.txt”的追溯失败",
   "invalid `OPERATIONS` variable": "无效的 `OPERATIONS` 变量",
-  "initial buffer text: {:?}": "无效 `MAX_EDITS_PER_OPERATION` 变量",
-  "initial blame entries: {:?}": "无效 `MAX_EDITS_PER_OPERATION` 变量",
+  "initial buffer text: {:?}": "初始缓冲区文本: {:?}",
+  "initial blame entries: {:?}": "初始追溯条目: {:?}",
   "editing buffer": "编辑缓冲区",
   "buffer text: {:?}": "缓冲区文本: {:?}",
   "regenerating blame entries: {:?}": "重新生成追溯条目: {:?}"
