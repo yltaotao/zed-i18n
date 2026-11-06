@@ -117,7 +117,7 @@ jobs:
             sha256sums.txt
 
       - name: 发布 Release
-        if: github.event_name == 'schedule' || inputs.release
+        if: github.event_name != 'workflow_dispatch' || inputs.release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ env.STAMP }}
@@ -128,7 +128,7 @@ jobs:
             sha256sums.txt
 
       - name: 清理旧 Release（只留最近 3 个）
-        if: github.event_name == 'schedule' || inputs.release
+        if: github.event_name != 'workflow_dispatch' || inputs.release
         env:
           GH_TOKEN: ${{ github.token }}
         shell: pwsh
