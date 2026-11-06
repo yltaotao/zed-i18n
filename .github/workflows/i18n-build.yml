@@ -107,6 +107,7 @@ jobs:
         with:
           name: zed-windows-${{ env.STAMP }}
           if-no-files-found: error
+          retention-days: 1
           path: |
             zed-windows-*.zip
             sha256sums.txt
@@ -121,3 +122,17 @@ jobs:
           files: |
             zed-windows-*.zip
             sha256sums.txt
+
+      - name: 清理旧 Release（只留最近 3 个）
+        if: github.event_name == 'schedule' || inputs.release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: pwsh
+        run: |
+          $old = gh release list --limit 100 --json tagName,publishedAt `
+            --jq '[sort_by(.publishedAt) | reverse][3:] | .[].tagName' 2>$null
+          foreach ($tag in $old) {
+            if (-not $tag) { continue }
+            Write-Host "删除旧 Release: $tag"
+            gh release delete $tag --yes --cleanup-tag
+          }
