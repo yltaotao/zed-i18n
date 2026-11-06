@@ -1,6 +1,10 @@
 name: Zed 汉化每日构建
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - .github/build-request
   schedule:
     - cron: '0 19 * * 6'
   workflow_dispatch:
