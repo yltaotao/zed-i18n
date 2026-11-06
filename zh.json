@@ -164,8 +164,7 @@
   "Profile name": "配置名称",
   "Configure MCP Tools": "配置 MCP 工具",
   "Configure Default Model": "配置默认模型",
-  "Configure Built-in Tools": "配置内置工具",
-  "Agent Profile Default Model Configured": "已配置智能体配置的默认模型"
+  "Configure Built-in Tools": "配置内置工具"
  },
  "zed/crates/agent_ui/src/agent_diff.rs": {
   "Next Hunk": "下一块",
@@ -530,7 +529,6 @@
  },
  "zed/crates/agent_ui/src/ui/end_trial_upsell.rs": {
   "Upgrade to Zed Pro": "升级到 Zed Pro",
-  "Banner Dismissed": "横幅已关闭",
   "Your Zed Pro Trial has expired": "你的 Zed Pro 试用已到期",
   "You've been automatically reset to the Free plan.": "你已被自动切换回免费套餐。"
  },
@@ -549,7 +547,6 @@
  },
  "zed/crates/ai_onboarding/src/ai_onboarding.rs": {
   "Get Started": "现在开始",
-  "Banner Dismissed": "横幅已关闭",
   "Start Free Trial": "开始免费试用"
  },
  "zed/crates/anthropic/src/anthropic.rs": {
@@ -601,7 +598,6 @@
   "cannot join while on another call": "不能在另一个呼叫中加入",
   "no incoming call": "无来电",
   "Incoming Call Accepted": "已接听",
-  "Incoming Call Declined": "已拒绝",
   "Channel Joined": "频道已加入",
   "Call Ended": "呼叫结束",
   "Project Shared": "项目已共享",
@@ -647,7 +643,6 @@
   "not connected": "未连接"
  },
  "zed/crates/client/src/telemetry.rs": {
-  "Editor Edited": "编辑器已编辑",
   "Failed to send events: HTTP {:?}": "发送事件失败: HTTP {:?}"
  },
  "zed/crates/client/src/test.rs": {
@@ -750,7 +745,6 @@
   "invalid peer id": "无效对等 ID"
  },
  "zed/crates/collab_ui/src/channel_view.rs": {
-  "Channel Notes Opened": "频道笔记已打开",
   "Link copied to clipboard": "链接已复制到剪贴板"
  },
  "zed/crates/collab_ui/src/collab_panel.rs": {
@@ -848,7 +842,6 @@
  },
  "zed/crates/command_palette/src/command_palette.rs": {
   "Execute a command...": "执行命令...",
-  "Action Invoked": "操作已调用",
   "Run": "运行",
   "Command": "命令",
   "Remove from Command History": "从命令历史中移除",
@@ -1174,10 +1167,8 @@
  },
  "zed/crates/extensions_ui/src/components/extension_card.rs": {
   "Uninstall": "卸载",
-  "Extension Uninstalled": "已卸载扩展",
   "Configure": "配置",
   "Install": "安装",
-  "Extension Installed": "已安装扩展",
   "Upgrade": "升级",
   "v{version} is not compatible with this version of Zed.": "v{version} 与此版本的 Zed 不兼容。",
   "Themes": "主题",
@@ -1339,7 +1330,6 @@
  "zed/crates/git_ui/src/commit_modal.rs": {
   "<no branch>": "<无分支>",
   "Switch Branch": "切换分支",
-  "Git Committed": "Git 已提交",
   "Skip Hooks": "跳过钩子"
  },
  "zed/crates/git_ui/src/commit_tooltip.rs": {
@@ -1427,26 +1417,20 @@
   "Trash these files?": "回收这些文件？",
   "Failed to trash files": "回收文件失败",
   "Git Panel": "Git 面板",
-  "Git Committed": "Git 已提交",
   "There are still conflicts. You must stage these before committing": "仍然存在冲突。在提交之前，您必须暂存这些更改。",
   "No changes to commit": "无更改可提交",
-  "Git Uncommitted": "Git 未提交",
   "No active repository": "没有活动的代码仓库",
   "This commit was already pushed to {}.": "此提交已被推送到 {}。",
   "Are you sure?": "您确定吗？",
   "Delete": "删除",
   "Create": "创建",
   "Update": "更新",
-  "Git Commit Message Generated": "Git 提交信息已生成",
-  "Git Fetched": "Git 已提取",
   "Error while fetching {:?}": "抓取 {:?} 时出错",
   "Unable to initialize a git repository": "无法初始化 git 仓库",
   "Open a directory first": "请先打开一个目录",
   "Where would you like to initialize this git repository?": "您想在哪初始化此 git 仓库？",
-  "Git Pulled": "Git 已拉取",
   "Failed to get current remote: {}": "获取当前远程仓库失败：{}",
   "Error while pulling {:?}": "拉取 {:?} 时出错",
-  "Git Pushed": "Git 已推送",
   "Error while pushing {:?}": "推送 {:?} 时出错",
   "No active branch": "无活动分支",
   "View Log": "查看日志",
@@ -1588,7 +1572,6 @@
   "Failed to rename branch": "重命名分支失败"
  },
  "zed/crates/git_ui/src/project_diff.rs": {
-  "Git Diff Opened": "已打开 Git 差异",
   "Git Panel": "Git 面板",
   "Action": "操作",
   "Agent Panel": "代理面板",
@@ -1945,8 +1928,7 @@
   "Hello, world!": "你好，世界！"
  },
  "zed/crates/onboarding/src/base_keymap_picker.rs": {
-  "Select a base keymap...": "选择基础键盘映射",
-  "Settings Changed": "设置已更改"
+  "Select a base keymap...": "选择基础键盘映射"
  },
  "zed/crates/onboarding/src/basics_page.rs": {
   "Vim Mode": "Vim 模式",
@@ -2313,8 +2295,7 @@
   "not implemented": "未实现"
  },
  "zed/crates/repl/src/session.rs": {
-  "workspace dropped": "工作区已移除",
-  "Kernel Status Changed": "内核状态已更改"
+  "workspace dropped": "工作区已移除"
  },
  "zed/crates/rope/src/rope.rs": {
   "invalid `OPERATIONS` variable": "无效的 `OPERATIONS` 变量"
@@ -3586,8 +3567,7 @@
   "Test": "测试"
  },
  "zed/crates/telemetry/src/telemetry.rs": {
-  "Project Diagnostics Opened": "项目诊断已打开",
-  "Documentation Viewed": "文档已查看"
+  "Project Diagnostics Opened": "项目诊断已打开"
  },
  "zed/crates/terminal/src/terminal.rs": {
   "Exit": "退出",
@@ -3640,14 +3620,12 @@
  },
  "zed/crates/theme_selector/src/icon_theme_selector.rs": {
   "Select Icon Theme...": "选择图标主题...",
-  "Settings Changed": "设置已更改",
   "View Icon Theme Docs": "查看图标主题文档",
   "Install Icon Themes": "安装图标主题"
  },
  "zed/crates/theme_selector/src/theme_selector.rs": {
   "error loading theme {}: {}": "加载主题 {} 时出错：{}",
-  "Select Theme...": "选择主题...",
-  "Settings Changed": "设置已更改"
+  "Select Theme...": "选择主题..."
  },
  "zed/crates/time_format/src/time_format.rs": {
   "1 minute ago": "1 分钟前",
@@ -3684,7 +3662,6 @@
   "Microphone will be muted": "麦克风将被静音"
  },
  "zed/crates/title_bar/src/onboarding_banner.rs": {
-  "Banner Dismissed": "横幅已关闭",
   "Close Announcement Banner": "关闭公告横幅"
  },
  "zed/crates/title_bar/src/title_bar.rs": {
@@ -4011,7 +3988,6 @@
   "Breakpoints are empty after querying database for them": "查询数据库后断点仍为空"
  },
  "zed/crates/workspace/src/security_modal.rs": {
-  "Open in Restricted": "以受限模式打开",
   "Trust and Continue": "信任并继续",
   "Restricted Mode prevents:": "受限模式会阻止：",
   "Stay in Restricted Mode": "留在受限模式",
@@ -4194,7 +4170,6 @@
   "Zed failed to launch": "Zed 启动失败",
   "Exit": "退出",
   "zed is already running": "zed 已在运行",
-  "Settings Changed": "设置已更改",
   "Themes dir path {themes_dir:?} is not a directory": "主题目录 {themes_dir:?} 不是一个目录",
   "Failed to create themes dir at path {themes_dir:?}": "创建主题目录失败，路径为 {themes_dir:?}",
   "Reopen in Dev Container": "在开发容器中重新打开",
