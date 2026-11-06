@@ -28,6 +28,8 @@ jobs:
   cleanup:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+
       - name: 清理 Release / Artifact / 运行记录
         env:
           GH_TOKEN: ${{ github.token }}
