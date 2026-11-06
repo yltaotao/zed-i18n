@@ -1,6 +1,6 @@
 # zed-i18n
 
-Zed 编辑器简体中文汉化版，每天自动构建。
+Zed 编辑器简体中文汉化版，每周自动构建。
 
 原理：从上游 [zed-industries/zed](https://github.com/zed-industries/zed) 的 main 拉源码 →
 按 `zh.json` 把英文字符串替换成中文 → 在 GitHub Actions 的 Windows 运行器上编译 → 发布 Release。
@@ -43,7 +43,7 @@ python tools/i18n.py check --src D:/zed-upstream
 
 ## 构建
 
-- 定时：每天北京时间 03:00 自动构建。
+- 定时：每周日北京时间 03:00 自动构建。
   GitHub 规定仓库 60 天无活动会暂停定时任务，届时手动跑一次即可恢复。
 - 手动：Actions → Zed 汉化每日构建 → Run workflow，可指定上游分支/标签、是否发 Release。
 - 构建失败时，错误日志末尾 400 行会推到 `ci-log` 分支的 `last-error.txt`。
