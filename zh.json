@@ -901,8 +901,6 @@
  },
  "zed/crates/diagnostics/src/diagnostics.rs": {
   "No problems in workspace": "工作区无问题",
-  "EmptyPane": "空窗格",
-  "Diagnostics": "诊断",
   "Project Diagnostics": "项目诊断",
   "No problems": "无问题",
   "Project Diagnostics Opened": "项目诊断已打开"
@@ -1001,7 +999,6 @@
   "Editor Saved": "编辑器已保存",
   "Editor Opened": "编辑器已打开",
   "Rename": "重命名",
-  "Editor": "编辑器",
   "Cancel": "取消",
   "bookmark indicator": "书签指示器",
   "LSP Edit": "LSP 编辑",
@@ -1099,7 +1096,6 @@
  },
  "zed/crates/editor/src/items.rs": {
   "cannot call save_as on an excerpt list": "不能在摘要列表上调用 save_as",
-  "Editor": "编辑器",
   "Failed to query editor state": "查询编辑器状态失败",
   "failed to save serialized editor": "保存序列化编辑器失败",
   "buffer doesn't have a file": "缓冲区没有文件",
@@ -1713,11 +1709,6 @@
  },
  "zed/crates/gpui/src/elements/div.rs": {
   "Buffer Font Size": "缓冲区字体大小"
- },
- "zed/crates/gpui/src/key_dispatch.rs": {
-  "Editor": "编辑器",
-  "Pane": "窗格",
-  "Terminal": "终端"
  },
  "zed/crates/gpui_linux/src/linux/platform.rs": {
   "Couldn't open file picker due to missing xdg-desktop-portal implementation.": "由于缺少 xdg-desktop-portal 实现，无法打开文件选择器。",
@@ -2388,8 +2379,7 @@
   "Open File": "打开文件"
  },
  "zed/crates/settings/src/keymap_file.rs": {
-  "Unknown": "未知",
-  "Editor": "编辑器"
+  "Unknown": "未知"
  },
  "zed/crates/settings_ui/src/page_data.rs": {
   "Theme Mode": "主题模式",
@@ -3570,8 +3560,7 @@
   "Project Diagnostics Opened": "项目诊断已打开"
  },
  "zed/crates/terminal/src/terminal.rs": {
-  "Exit": "退出",
-  "Terminal": "终端"
+  "Exit": "退出"
  },
  "zed/crates/terminal_view/src/terminal_panel.rs": {
   "New…": "新建…",
@@ -3588,7 +3577,6 @@
   "Edit Settings": "编辑设置",
   "Terminal Panel": "终端面板",
   "Inline Assist": "内联助手",
-  "Terminal": "终端",
   "Failed to spawn terminal": "无法启动终端",
   "Failed to read workspace": "读取工作区失败",
   "Failed to retrieve terminal pane": "获取终端窗格失败"
@@ -3601,7 +3589,6 @@
   "Clear": "清除",
   "Inline Assist": "内联助手",
   "Close Terminal Tab": "关闭终端",
-  "Terminal": "终端",
   "Process ID (PID): {}": "进程 ID(PID)：{}",
   "Rename": "重命名",
   "Rerun task": "重新运行任务",
@@ -3643,7 +3630,6 @@
  "zed/crates/title_bar/src/application_menu.rs": {
   "Open Application Menu": "打开程序目录",
   "Agent Panel": "代理面板",
-  "Diagnostics": "诊断",
   "View": "视图",
   "Settings": "设置"
  },
@@ -3921,8 +3907,6 @@
   "Split Down": "向下拆分",
   "Zoom Out": "缩小",
   "Zoom In": "放大",
-  "Pane": "窗格",
-  "EmptyPane": "空窗格",
   "Settings": "设置",
   "pane items do not match expectation": "窗格项不符合预期",
   "Locked Tab": "已锁定的标签页",
@@ -3974,7 +3958,6 @@
   "Could not retrieve inserted pane_id": "无法检索插入的 pane_id",
   "Saving items": "保存项目",
   "Preparing insertion": "准备插入",
-  "Terminal": "终端",
   "Inserting bookmark": "正在插入书签",
   "Get remote connection": "获取远程连接",
   "Clearing old bookmarks": "正在清理旧书签",
@@ -4073,7 +4056,6 @@
   "invalid update": "无效更新",
   "workspace dropped": "工作区已移除",
   "no id for view": "无视图 ID",
-  "Editor": "编辑器",
   "empty project": "空项目",
   "participant location was not provided": "参与者位置未提供",
   "Copy link to section": "复制到部分链接",
@@ -4227,7 +4209,6 @@
   "On {} Failed to find {}": "在 {} 上未找到 {}",
   "On {} Failed to find {} with key binding {}": "在 {} 上未找到具有键绑定 {} 的 {}",
   "Agent Panel": "代理面板",
-  "Diagnostics": "诊断",
   "View": "视图",
   "Accessibility Tree": "无障碍树",
   "Partial file index": "部分文件索引",
@@ -4254,7 +4235,6 @@
   "Terminal Panel": "终端面板",
   "Agent Panel": "代理面板",
   "Git Panel": "Git 面板",
-  "Diagnostics": "诊断",
   "About Zed": "关于 Zed",
   "Check for Updates": "检查更新",
   "Settings": "设置",
@@ -4360,7 +4340,6 @@
   "Got wrong instance handshake value": "收到错误的实例握手值"
  },
  "zed/crates/zed/src/zed/open_listener.rs": {
-  "AgentPanel": "代理面板",
   "cannot open both local and ssh paths": "不能同时打开本地和 ssh 路径",
   "no listener for open requests": "无打开请求的监听器",
   "error connecting to cli": "连接到 cli 时出错",
@@ -4394,7 +4373,6 @@
   "Editor Controls": "编辑器控制",
   "Inlay Hints": "内联提示",
   "Edit Predictions": "编辑预测",
-  "Diagnostics": "诊断",
   "Inline Diagnostics": "内联诊断",
   "Line Numbers": "行号",
   "Selection Menu": "选择菜单",

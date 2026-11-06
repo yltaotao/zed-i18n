@@ -59,6 +59,34 @@ def resolve(src: Path, rel: str) -> Path:
     return src / tail
 
 
+def is_key_context(source: Path, literal: str) -> bool:
+    """这个字面量是否被当成键位上下文名（"Editor"、"Pane"）。
+
+    上下文名一旦被翻译，键位表里声明的 context 就永远匹配不上，
+    整个编辑器的快捷键（退格、Ctrl+Z 等）会集体失效。
+    """
+    markers = ("key_context", "KeyContext::parse", '"context"')
+    for path in (source / "crates").rglob("*.rs"):
+        try:
+            content = path.read_text(encoding="utf-8")
+        except UnicodeDecodeError:
+            continue
+        if literal not in content:
+            continue
+        for line in content.splitlines():
+            if literal in line and any(marker in line for marker in markers):
+                return True
+    keymaps = source / "assets" / "keymaps"
+    for path in keymaps.rglob("*.json"):
+        try:
+            content = path.read_text(encoding="utf-8")
+        except UnicodeDecodeError:
+            continue
+        if literal in content:
+            return True
+    return False
+
+
 def cmd_add(args) -> int:
     """把一条译文写进 zh.json：先扫源码，看这句英文出现在哪些文件里。"""
     source = Path(args.src)
@@ -88,6 +116,14 @@ def cmd_add(args) -> int:
     if not hits:
         print(f'NOT FOUND: no source file contains "{args.english}"')
         return 1
+
+    # 键位上下文名（"Editor"、"Pane" 这类）翻译后绑定会全部失效，必须拦下
+    if is_key_context(source, literal):
+        if not args.force:
+            print(f'BLOCKED: "{args.english}" 被用作键位上下文名，翻译它会让所有快捷键失效')
+            print("         确认不是上下文名（比如只是菜单文案）就加 --force")
+            return 1
+        print(f'WARN: 已强制写入键位上下文名 "{args.english}"，快捷键可能失效')
 
     changed = False
     updated = False
@@ -198,6 +234,7 @@ def main() -> int:
     p_add.add_argument("--src", default=".", help="上游源码目录（含 crates/）")
     p_add.add_argument("--prefix", default="zed", help="写进词典时的路径前缀")
     p_add.add_argument("--dictionary", default="zh.json")
+    p_add.add_argument("--force", action="store_true", help="允许写入键位上下文名（危险）")
     p_add.set_defaults(func=cmd_add)
 
     p_replace = sub.add_parser("replace", help="把词典替换进源码（CI 用）")
