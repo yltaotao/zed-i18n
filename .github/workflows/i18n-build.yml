@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - .github/build-request
+      - .github/trigger-build
   schedule:
     - cron: '0 19 * * 6'
   workflow_dispatch:

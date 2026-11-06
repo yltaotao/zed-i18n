@@ -1,10 +1,6 @@
 name: 清理历史构建
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - .github/cleanup-request
   workflow_dispatch:
     inputs:
       keep_releases:

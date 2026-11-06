@@ -16,7 +16,9 @@ Zed 编辑器简体中文汉化版，每周自动构建。
 |---|---|
 | `zh.json` | 词典：源码文件 → {英文字面量: 中文}，唯一数据源 |
 | `tools/i18n.py` | 词典工具：add / replace / check 三个子命令 |
-| `.github/workflows/i18n-build.yml` | 构建流水线 |
+| `.github/workflows/i18n-build.yml` | 构建流水线（定时 + 手动 + 触发文件） |
+| `.github/workflows/cleanup.yml` | 一次性清理历史 Release / artifact |
+| `.github/trigger-build` | 改这个文件并推送，立刻触发一次构建 |
 
 ## 加一条翻译
 

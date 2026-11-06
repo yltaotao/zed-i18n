@@ -1,6 +1,2 @@
-last-error.txt
-strings.json
-need.json
-cand*.tsv
 __pycache__/
 *.pyc
