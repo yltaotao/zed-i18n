@@ -1,0 +1,73 @@
+name: 清理历史构建
+
+on:
+  workflow_dispatch:
+    inputs:
+      keep_releases:
+        description: "保留最近几个 Release"
+        type: number
+        default: 1
+      keep_runs:
+        description: "保留最近几次运行记录"
+        type: number
+        default: 3
+      delete_artifacts:
+        description: "同时删除所有 artifact"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 清理 Release / Artifact / 运行记录
+        env:
+          GH_TOKEN: ${{ github.token }}
+          KEEP_RELEASES: ${{ inputs.keep_releases }}
+          KEEP_RUNS: ${{ inputs.keep_runs }}
+          DELETE_ARTIFACTS: ${{ inputs.delete_artifacts }}
+        run: |
+          set -u
+          repo="$GITHUB_REPOSITORY"
+
+          echo "== Release =="
+          gh release list --limit 200 --json tagName,publishedAt \
+            --jq 'sort_by(.publishedAt) | reverse | .[].tagName' > /tmp/tags.txt
+          echo "现有 $(wc -l < /tmp/tags.txt) 个，保留最近 $KEEP_RELEASES 个"
+          tail -n +$((KEEP_RELEASES + 1)) /tmp/tags.txt | while read -r tag; do
+            if [ -n "$tag" ]; then
+              echo "删除 Release $tag"
+              gh release delete "$tag" --yes --cleanup-tag || echo "  失败: $tag"
+            fi
+          done
+
+          if [ "$DELETE_ARTIFACTS" = "true" ]; then
+            echo "== Artifact =="
+            gh api --paginate "/repos/$repo/actions/artifacts?per_page=100" \
+              --jq '.artifacts[].id' > /tmp/arts.txt
+            echo "现有 $(wc -l < /tmp/arts.txt) 个"
+            while read -r id; do
+              if [ -n "$id" ]; then
+                gh api -X DELETE "/repos/$repo/actions/artifacts/$id" && echo "删除 artifact $id"
+              fi
+            done < /tmp/arts.txt
+          fi
+
+          echo "== 运行记录 =="
+          gh api --paginate "/repos/$repo/actions/runs?per_page=100" \
+            --jq '.workflow_runs[].id' > /tmp/runs.txt
+          echo "现有 $(wc -l < /tmp/runs.txt) 个，保留最近 $KEEP_RUNS 个"
+          tail -n +$((KEEP_RUNS + 1)) /tmp/runs.txt | while read -r id; do
+            if [ -n "$id" ] && [ "$id" != "$GITHUB_RUN_ID" ]; then
+              gh api -X DELETE "/repos/$repo/actions/runs/$id" || true
+            fi
+          done
+
+          echo "== 清理后 =="
+          echo "Release: $(gh release list --limit 200 --json tagName --jq 'length')"
+          echo "Artifact: $(gh api "/repos/$repo/actions/artifacts?per_page=1" --jq '.total_count')"
+          echo "运行记录: $(gh api "/repos/$repo/actions/runs?per_page=1" --jq '.total_count')"
