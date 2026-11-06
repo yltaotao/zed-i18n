@@ -37,6 +37,10 @@ jobs:
         run: |
           set -u
           repo="$GITHUB_REPOSITORY"
+          KEEP_RELEASES="${KEEP_RELEASES:-1}"
+          KEEP_RUNS="${KEEP_RUNS:-3}"
+          DELETE_ARTIFACTS="${DELETE_ARTIFACTS:-true}"
+          echo "参数: keep_releases=$KEEP_RELEASES keep_runs=$KEEP_RUNS delete_artifacts=$DELETE_ARTIFACTS"
 
           echo "== Release =="
           gh release list --limit 200 --json tagName,publishedAt \
